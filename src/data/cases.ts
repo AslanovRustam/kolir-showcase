@@ -1448,7 +1448,7 @@ export const CASES: CaseItem[] = [
     description: 'Physiquest is an at-home fitness app offering 90+ guided workout programs across weight loss, muscle building and general wellness. We designed the brand identity, the onboarding fitness-level test, program browsing and workout screens — unified by a bold blue-to-violet gradient system.',
     results: ['Mobile app UI','Brand identity','Design system','Marketing visuals'],
     cover: 'images/new/physiquest/4.png',
-    gallery: [ { type: 'group', images: [
+    gallery: [ { type: 'slider', images: [
       { src: 'images/new/physiquest/4.png' }, { src: 'images/new/physiquest/1.png' },
       { src: 'images/new/physiquest/2.png' }, { src: 'images/new/physiquest/3.png' },
     ] } ],
@@ -1462,7 +1462,7 @@ export const CASES: CaseItem[] = [
     description: 'Mondrian Spaces is a premium coworking and office-rental brand. We crafted a refined, typography-led landing page pairing a serif display headline with a teal accent palette, plus an integrated location and membership search and a responsive mobile layout.',
     results: ['Marketing website','Mobile layout','Brand system'],
     cover: 'images/new/real-estate/1.jpg',
-    gallery: [ { type: 'group', images: [
+    gallery: [ { type: 'slider', images: [
       { src: 'images/new/real-estate/1.jpg' }, { src: 'images/new/real-estate/3.jpg' },
       { src: 'images/new/real-estate/2.jpg' },
     ] } ],
@@ -1476,7 +1476,7 @@ export const CASES: CaseItem[] = [
     description: 'HikeBike is an urban e-bike rental and sales platform. We designed a moody, high-contrast hero showcasing hourly and daily rental pricing, featured models with spec callouts and accessory highlights — all wrapped in a confident deep-green aesthetic.',
     results: ['Marketing website','Product showcase UI','Brand visuals'],
     cover: 'images/new/bags/1.jpg',
-    gallery: [ { type: 'group', images: [ { src: 'images/new/bags/1.jpg' } ] } ],
+    gallery: [ { type: 'slider', images: [ { src: 'images/new/bags/1.jpg' } ] } ],
     links: [],
   },
   {
@@ -1487,7 +1487,7 @@ export const CASES: CaseItem[] = [
     description: 'The Bakery is an artisan bread and pastry e-commerce concept. We designed a cream-and-coral storefront with a daily-special hero, product highlights for baguettes and muffins, and a clean grid that keeps the focus on the food photography.',
     results: ['E-commerce website','Brand identity','Product cards'],
     cover: 'images/new/bakery/3.jpg',
-    gallery: [ { type: 'group', images: [
+    gallery: [ { type: 'slider', images: [
       { src: 'images/new/bakery/3.jpg' }, { src: 'images/new/bakery/1.jpg' }, { src: 'images/new/bakery/2.jpg' },
     ] } ],
     links: [],
@@ -1500,7 +1500,7 @@ export const CASES: CaseItem[] = [
     description: 'OK Banking is a mobile-first digital bank. We designed the marketing landing page and the in-app dashboard — card management, quick send / receive / cashback actions and a transaction feed — unified by a punchy yellow-and-charcoal palette.',
     results: ['Mobile app UI','Marketing website','Design system'],
     cover: 'images/new/bank/1.png',
-    gallery: [ { type: 'group', images: [
+    gallery: [ { type: 'slider', images: [
       { src: 'images/new/bank/1.png' }, { src: 'images/new/bank/2.png' },
     ] } ],
     links: [],
@@ -1513,7 +1513,7 @@ export const CASES: CaseItem[] = [
     description: 'Bristol Underground is an online gallery and shop for Banksy prints and canvases. We designed a bold black-white-yellow editorial layout with a timeline-based paintings gallery, detailed product views and an order flow.',
     results: ['E-commerce website','Gallery UI','Order flow'],
     cover: 'images/new/banksy/1.jpg',
-    gallery: [ { type: 'group', images: [
+    gallery: [ { type: 'slider', images: [
       { src: 'images/new/banksy/1.jpg' }, { src: 'images/new/banksy/2.jpg' }, { src: 'images/new/banksy/3.jpg' },
     ] } ],
     links: [],
@@ -1526,7 +1526,7 @@ export const CASES: CaseItem[] = [
     description: 'Velych is a Ukrainian craft-beer line built around bold engraved portraits of national figures. We designed the illustrated can range and a warm, editorial storefront that lets fans browse the lineup, learn the story behind each label and buy by the can.',
     results: ['Illustrated packaging series','Brand identity','Web store'],
     cover: 'images/new/beer/1.jpg',
-    gallery: [ { type: 'group', images: [
+    gallery: [ { type: 'slider', images: [
       { src: 'images/new/beer/1.jpg' }, { src: 'images/new/beer/2.png' }, { src: 'images/new/beer/3.png' },
       { src: 'images/new/beer/4.png' }, { src: 'images/new/beer/5.png' },
     ] } ],
@@ -1540,7 +1540,7 @@ export const CASES: CaseItem[] = [
     description: 'The Body Positivity help center needed a site that felt confident and safe rather than clinical. We paired a terracotta-and-black palette with a strong display typeface and inclusive photography to promote lectures, appointments and community around loving your body.',
     results: ['Marketing website','Inclusive visual language','Appointment flow'],
     cover: 'images/new/body/5.png',
-    gallery: [ { type: 'group', images: [
+    gallery: [ { type: 'slider', images: [
       { src: 'images/new/body/5.png' }, { src: 'images/new/body/3.png' }, { src: 'images/new/body/4.png' },
     ] } ],
     links: [],
@@ -1553,7 +1553,7 @@ export const CASES: CaseItem[] = [
     description: 'Chariball lets supporters buy original, signed in-game items from top players and place bids that fund charitable causes. We designed a clean, player-forward interface with a club selector rail, product listings and a live bidding experience.',
     results: ['Auction platform UI','Club & catalog browsing','Bidding flow'],
     cover: 'images/new/chairball/1.jpg',
-    gallery: [ { type: 'group', images: [
+    gallery: [ { type: 'slider', images: [
       { src: 'images/new/chairball/1.jpg' }, { src: 'images/new/chairball/2.jpg' }, { src: 'images/new/chairball/3.jpg' },
       { src: 'images/new/chairball/5.jpg' }, { src: 'images/new/chairball/4.jpg' },
     ] } ],
@@ -1567,7 +1567,7 @@ export const CASES: CaseItem[] = [
     description: 'A landing page for a restaurant built around traditional Ukrainian recipes. Rich food photography of borsch, vareniki and more sits against a dark layout with playful hand-drawn accents, a featured-menu carousel, reviews and clear book-a-table and order actions.',
     results: ['Restaurant landing page','Menu & reservation flow','Food-led art direction'],
     cover: 'images/new/cuisine/1.png',
-    gallery: [ { type: 'group', images: [ { src: 'images/new/cuisine/1.png' } ] } ],
+    gallery: [ { type: 'slider', images: [ { src: 'images/new/cuisine/1.png' } ] } ],
     links: [],
   },
   {
@@ -1578,7 +1578,7 @@ export const CASES: CaseItem[] = [
     description: 'Donuts Club is a playful online sweet shop. We built an energetic orange hero with splashing-milk 3D donut visuals, a product rail with instant buy actions and a bold membership promo offering a discount on every third donut.',
     results: ['Landing page','Product cards','Promo mechanics'],
     cover: 'images/new/donat/1.jpg',
-    gallery: [ { type: 'group', images: [ { src: 'images/new/donat/1.jpg' } ] } ],
+    gallery: [ { type: 'slider', images: [ { src: 'images/new/donat/1.jpg' } ] } ],
     links: [],
   },
   {
@@ -1589,7 +1589,7 @@ export const CASES: CaseItem[] = [
     description: 'Fizz is a mobile game that combines puzzle mechanics with classic Tetris. We designed a fast, angular wordmark built from stacked colour blocks and applied it across mockups — a glossy wrap surface, an in-app phone screen and printed merch.',
     results: ['Logo & wordmark','Brand identity','Application mockups'],
     cover: 'images/new/fizz/1.jpg',
-    gallery: [ { type: 'group', images: [
+    gallery: [ { type: 'slider', images: [
       { src: 'images/new/fizz/1.jpg' }, { src: 'images/new/fizz/2.jpg' },
       { src: 'images/new/fizz/3.jpg' }, { src: 'images/new/fizz/4.jpg' },
     ] } ],
@@ -1603,7 +1603,7 @@ export const CASES: CaseItem[] = [
     description: 'Dino Bank is a free debit card for children and teens aged 6 to 17. We designed a bright, character-driven landing page with a bespoke dinosaur mascot, 3D card visuals and clear feature blocks for cashback, mobile payments and parental controls.',
     results: ['Kid-friendly brand identity','Landing page','3D card & mascot assets'],
     cover: 'images/new/kidsbank/1.jpg',
-    gallery: [ { type: 'group', images: [
+    gallery: [ { type: 'slider', images: [
       { src: 'images/new/kidsbank/1.jpg' }, { src: 'images/new/kidsbank/2.jpg' }, { src: 'images/new/kidsbank/3.jpg' },
     ] } ],
     links: [],
@@ -1616,7 +1616,7 @@ export const CASES: CaseItem[] = [
     description: 'A modern rebrand concept for a storied football club, anchored by a redrawn line-based bird logo and a confident red, yellow and green palette. The system stretches across matchday flags, scarves, kits and stickers, paired with clean editorial layouts.',
     results: ['Identity system','Logo across kits, scarves & flags','Editorial matchday layouts'],
     cover: 'images/new/liverpool/1.png',
-    gallery: [ { type: 'group', images: [
+    gallery: [ { type: 'slider', images: [
       { src: 'images/new/liverpool/1.png' }, { src: 'images/new/liverpool/6.png' }, { src: 'images/new/liverpool/7.png' },
       { src: 'images/new/liverpool/2.png' }, { src: 'images/new/liverpool/3.png' }, { src: 'images/new/liverpool/5.png' },
       { src: 'images/new/liverpool/4.png' }, { src: 'images/new/liverpool/9.png' },
@@ -1631,7 +1631,7 @@ export const CASES: CaseItem[] = [
     description: 'Arter is a marketplace for unique, single-edition NFT artworks. The interface pairs a monochrome sidebar with vivid neon collection cards, live ETH bids and creator stats — a striking, gallery-like browsing experience.',
     results: ['Marketplace UI','Neon visual system','Bid & stats hierarchy'],
     cover: 'images/new/nft/1.jpg',
-    gallery: [ { type: 'group', images: [ { src: 'images/new/nft/1.jpg' } ] } ],
+    gallery: [ { type: 'slider', images: [ { src: 'images/new/nft/1.jpg' } ] } ],
     links: [],
   },
   {
@@ -1642,7 +1642,7 @@ export const CASES: CaseItem[] = [
     description: 'Nitrium is a crypto exchange positioned around putting trading energy in users’ hands. The identity centers on a connected-node mark evoking molecular bonds and blockchain networks, paired with a purple-to-cyan gradient and a clean geometric wordmark that flexes from watch face to billboard.',
     results: ['Logo & identity system','Print, OOH & stationery','Product UI concept'],
     cover: 'images/new/nitrium/1.jpg',
-    gallery: [ { type: 'group', images: [
+    gallery: [ { type: 'slider', images: [
       { src: 'images/new/nitrium/1.jpg' }, { src: 'images/new/nitrium/2.jpg' }, { src: 'images/new/nitrium/3.jpg' },
       { src: 'images/new/nitrium/4.jpg' }, { src: 'images/new/nitrium/5.jpg' }, { src: 'images/new/nitrium/8.jpg' },
       { src: 'images/new/nitrium/9.jpg' }, { src: 'images/new/nitrium/10.jpg' }, { src: 'images/new/nitrium/11.jpg' },
@@ -1657,7 +1657,7 @@ export const CASES: CaseItem[] = [
     description: 'Medic is a veterinary clinic focused on professional, caring pet treatment. We built a soft, friendly landing page with a paw-and-cross logo, real clinic photography and quick-access blocks for consultations, vaccinations and diagnostics.',
     results: ['Landing page','Care-focused brand tone','Service entry points'],
     cover: 'images/new/pets/1.jpg',
-    gallery: [ { type: 'group', images: [ { src: 'images/new/pets/1.jpg' } ] } ],
+    gallery: [ { type: 'slider', images: [ { src: 'images/new/pets/1.jpg' } ] } ],
     links: [],
   },
   {
@@ -1668,7 +1668,7 @@ export const CASES: CaseItem[] = [
     description: 'Swift is an electric scooter sharing service that lets riders move freely around the city. The design leans on an acid-green palette, oversized display typography and a 3D rider character, with pricing badges and an app CTA that make the value proposition instant.',
     results: ['Landing page','3D-led hero','App-download flow'],
     cover: 'images/new/samokator/1.jpg',
-    gallery: [ { type: 'group', images: [ { src: 'images/new/samokator/1.jpg' } ] } ],
+    gallery: [ { type: 'slider', images: [ { src: 'images/new/samokator/1.jpg' } ] } ],
     links: [],
   },
   {
@@ -1679,20 +1679,9 @@ export const CASES: CaseItem[] = [
     description: 'A rich football analytics and betting dashboard: player profiles with radar-chart attributes, live match cards, favourite leagues and clubs, and a personal balance panel with activity graphs. The dark UI with red accents keeps dense data legible.',
     results: ['Dashboard UI','Player-profile modules','Data-viz system'],
     cover: 'images/new/soccer-dashboard/1.jpg',
-    gallery: [ { type: 'group', images: [
+    gallery: [ { type: 'slider', images: [
       { src: 'images/new/soccer-dashboard/1.jpg' }, { src: 'images/new/soccer-dashboard/2.jpg' }, { src: 'images/new/soccer-dashboard/3.jpg' },
     ] } ],
-    links: [],
-  },
-  {
-    id: 'travel-easy', title: 'Travel Easy', client: 'Travel Easy · Travel booking app', year: 2025,
-    categories: ['Product','Web'], color: 'ink', text: 'cream',
-    teaser: 'A clean promo page for a travel app that makes booking transport, tours and tickets easier.',
-    scope: ['UI/UX design','Landing page','Mobile app UI'],
-    description: 'Travel Easy is a mobile app for planning trips and booking transport, tours and tickets across cities. The landing pairs a crisp blue-and-white split layout with a floating phone mockup, boarding-pass and route cards, and clear app-store CTAs.',
-    results: ['App promo page','Floating-card composition','Download-focused layout'],
-    cover: 'images/new/tickets/1.png',
-    gallery: [ { type: 'group', images: [ { src: 'images/new/tickets/1.png' } ] } ],
     links: [],
   },
   {
@@ -1703,7 +1692,7 @@ export const CASES: CaseItem[] = [
     description: 'Paperly delivers everyday essentials in as little as 10 minutes. The bold blue-and-yellow landing page combines product listings, trust badges, customer reviews and a delivery-agent hero, with device and tablet mockups demonstrating the responsive shopping experience.',
     results: ['E-commerce landing','Product & pricing UI','Responsive mockups'],
     cover: 'images/new/toilet/1.jpg',
-    gallery: [ { type: 'group', images: [
+    gallery: [ { type: 'slider', images: [
       { src: 'images/new/toilet/1.jpg' }, { src: 'images/new/toilet/2.jpg' }, { src: 'images/new/toilet/3.jpg' },
     ] } ],
     links: [],
@@ -1716,7 +1705,7 @@ export const CASES: CaseItem[] = [
     description: 'Tripp helps users plan trips with transport options, curated tours and ticket booking. The landing page uses a bold blue-and-white split layout with expressive editorial typography, a device mockup and floating boarding-pass and route UI cards.',
     results: ['Landing page','Editorial typography','Floating-UI storytelling'],
     cover: 'images/new/tripp/1.png',
-    gallery: [ { type: 'group', images: [ { src: 'images/new/tripp/1.png' } ] } ],
+    gallery: [ { type: 'slider', images: [ { src: 'images/new/tripp/1.png' } ] } ],
     links: [],
   },
   {
@@ -1727,7 +1716,7 @@ export const CASES: CaseItem[] = [
     description: 'Chicken Scratch School offers 125+ author lessons on typography and its application in design. The interface pairs a warm cream palette with bold 3D letterforms, orange accents and structured lesson cards covering type anatomy, serif vs sans and spacing.',
     results: ['Landing page','Type-led art direction','Course structure'],
     cover: 'images/new/typo/1.jpg',
-    gallery: [ { type: 'group', images: [ { src: 'images/new/typo/1.jpg' } ] } ],
+    gallery: [ { type: 'slider', images: [ { src: 'images/new/typo/1.jpg' } ] } ],
     links: [],
   },
   {
@@ -1738,7 +1727,7 @@ export const CASES: CaseItem[] = [
     description: 'A cinematic VR e-commerce concept that transports visitors into another dimension. The dark, neon-lit interface features a 3D helmeted character, futuristic HUD elements and product categories for helms, headsets and joysticks.',
     results: ['Landing page','Atmospheric 3D art direction','Product navigation'],
     cover: 'images/new/vr/1.jpg',
-    gallery: [ { type: 'group', images: [ { src: 'images/new/vr/1.jpg' } ] } ],
+    gallery: [ { type: 'slider', images: [ { src: 'images/new/vr/1.jpg' } ] } ],
     links: [],
   },
   {
@@ -1749,7 +1738,7 @@ export const CASES: CaseItem[] = [
     description: 'Workout is a fitness app offering exercises for healthy living, weight loss and stress relief. The design uses a neutral palette, oversized layered typography and a dynamic action photo, with social features like inviting friends and an easy / hard difficulty toggle.',
     results: ['Landing page','Editorial typography','Social features'],
     cover: 'images/new/work-out/1.png',
-    gallery: [ { type: 'group', images: [ { src: 'images/new/work-out/1.png' } ] } ],
+    gallery: [ { type: 'slider', images: [ { src: 'images/new/work-out/1.png' } ] } ],
     links: [],
   },
   {
@@ -1760,7 +1749,7 @@ export const CASES: CaseItem[] = [
     description: 'cliCar is a premium car-rental brand built around instant, phone-first booking. The design pairs a clean editorial layout with electric accent colours and topographic line motifs, spotlighting hero vehicles with 360° views, transparent hourly pricing and scan-to-rent QR codes.',
     results: ['Brand & visual system','Marketing website','Rent-in-one-click flow'],
     cover: 'images/new/carrent/4.jpg',
-    gallery: [ { type: 'group', images: [
+    gallery: [ { type: 'slider', images: [
       { src: 'images/new/carrent/4.jpg' }, { src: 'images/new/carrent/1.jpg' }, { src: 'images/new/carrent/2.jpg' },
       { src: 'images/new/carrent/3.jpg' }, { src: 'images/new/carrent/16.jpg' }, { src: 'images/new/carrent/5.jpg' },
       { src: 'images/new/carrent/9.jpg' }, { src: 'images/new/carrent/14.jpg' }, { src: 'images/new/carrent/15.jpg' },
