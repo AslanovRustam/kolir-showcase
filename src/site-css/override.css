@@ -1,0 +1,390 @@
+/* =========================================================================
+   Kolir · Next — локальні правки поверх перенесених стилів статики.
+   Підключається ОСТАННІМ.
+   ========================================================================= */
+
+/* Статичний animations.css ховає .hero-head, показуючи лише всередині .hero-card.
+   У Next спільний хедер стоїть standalone у layout — повертаємо показ на десктопі.
+   Повне меню показуємо від 900 (нижче — бургер: на планшеті-портреті повний хедер
+   не вміщувався). Контентний брейкпоінт лишається 768. */
+@media (min-width: 900px) {
+  /* Хедер-плашка за актуальним макетом (Figma node 5596-159587): єдиний
+     скруглений бар — ліворуч лого+навігація, праворуч UA/EN-тоглер + жовта
+     кнопка «Розпочати проєкт». Розміри шрифтів лишаємо як у поточному хедері
+     (вони вже у потрібному масштабі). */
+  .site-header .hero-head {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    height: 6.4rem;            /* нижчий хедер (було 8.4rem) */
+    width: min(160rem, calc(100vw - 8rem));   /* успадковує ширину ЯСКРАВОЇ плашки хіро (контент 1600), щоб бар збігався з нею по краях.
+                                                  (плашка = фон min(176rem,100vw-4rem) мінус 4rem інсет == min(160rem, 100vw-8rem)) */
+    margin: 0 auto;
+    padding: 0.8rem 2.4rem;
+    background: rgba(44, 0, 96, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 100px;
+    -webkit-backdrop-filter: blur(12.5px);
+    backdrop-filter: blur(12.5px);
+    box-shadow: 0 1.8rem 5rem rgba(20, 0, 50, 0.38);
+  }
+  .site-header .hh-left {
+    display: flex;
+    align-items: center;
+    gap: 3.9rem;
+  }
+  .site-header .hh-left .nav {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+  .site-header .hh-right {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  /* UA/EN тоглер: бордер, повне скруглення, активний сегмент — жовтий */
+  .site-header .hh-right .lang-cap {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 100px;
+    overflow: hidden;
+    padding: 0;
+  }
+  .site-header .hh-right .lang-cap-b {
+    font: inherit;
+    line-height: 1;
+    color: #fff;
+    background: transparent;
+    border: 0;
+    padding: 0.7rem 1.5rem;
+    cursor: pointer;
+  }
+  .site-header .hh-right .lang-cap-b.is-active {
+    background: #fdcc0d;
+    color: #380279;
+  }
+  /* Жовта кнопка CTA */
+  .site-header .hh-right .cta-top {
+    background: #fdcc0d;
+    color: #161616;
+    font-weight: 500;
+    border-radius: 30px;
+    padding: 0.7rem 1.5rem;
+    border: 0;
+  }
+  .site-header .hh-right .cta-top:hover {
+    filter: brightness(1.05);
+  }
+}
+
+/* Fixed-хедер оверлеїть контент, тож на сторінках-героях прибираємо НАДЛИШКОВИЙ
+   верхній відступ (раніше резервувався під хедер усередині картки + зайві
+   маржини) — контент піднімається ближче до хедера. Картковий padding-top, що
+   очищає сам хедер, лишаємо. */
+.kolir-page {
+  padding-top: 0 !important;
+}
+/* support-page.css імпортується у самій сторінці (ПІСЛЯ layout-овського
+   override.css), тож виграє каскад при рівній специфічності — піднімаємо
+   специфічність через html body, щоб гарантовано перебити. Десктоп. */
+@media (min-width: 768px) {
+  html body .kolir-page.support-page .hero-inner.support-hero-inner {
+    margin-top: 0 !important;
+  }
+}
+/* Support/Volunteer: support-redesign.css ставить картці padding-top:11.5rem
+   !important (селектор 0,5,0 — «місце під накладений nav»). Контент через те
+   сидить надто низько. Перебиваємо ID-селектором (#heroCard = 1,x,0 > 0,5,0):
+   зменшуємо верхній відступ — pill і так глибоко всередині картки, тож під хедер
+   не ховається. */
+/* Однаковий відступ від хедера до контенту героя на home та support: рухаємо
+   лише внутрішній padding-top картки (плашка лишається на місці). support має
+   більший внутрішній зсув контенту (flex min-height), тож його pt більший. */
+.support-page #heroCard {
+  padding-top: 5.3rem !important;   /* як на головній (було 8rem — підкладка сиділа нижче) */
+}
+.kolir-page:not(.support-page) #heroCard {
+  padding-top: 5.3rem !important;
+  /* було 10.4rem — під лого партнерів лишався завеликий порожній фіолет; тиснемо
+     майже впритул (~7px). */
+  padding-bottom: 0.7rem !important;
+}
+
+/* Support / Volunteer: на цих сторінках немає смуги trusted-лого знизу хіро, тож
+   нижній просвіт (між яскравою плашкою і низом тёмної картки) має дорівнювати
+   «вуху» (бічному просвіту) на всіх ширинах. Вухо = (фон − контент)/2, де
+   фон = min(176rem,100vw-4rem), контент = min(160rem, 100%-4rem):
+   на макс. ширині 8rem (80px), на проміжних спадає до 2rem (20px).
+   Та сама формула від вьюпорта: clamp(2rem, 50vw - 82rem, 8rem). */
+.support-page #heroCard.support-hero-card,
+.volunteer-page .hero #heroCard.vol-hero-card {
+  padding-bottom: clamp(2rem, calc(50vw - 82rem), 8rem) !important;
+}
+/* Мобілка: нижнє «вухо» = верхньому (1rem), а не 2rem (clamp-мінімум розрахований
+   під десктопні бічні «вуха»). + min-height знято → блоки нижче піднімаються. */
+@media (max-width: 767px){
+  .support-page #heroCard.support-hero-card,
+  .volunteer-page .hero #heroCard.vol-hero-card{
+    padding-bottom: 1rem !important;
+  }
+}
+
+/* МОБІЛКА: плаваючий хедер (низ ~8.5rem) перекривав верх хіро-плашки. Опускаємо
+   плашку нижче хедера (margin-top) і прибираємо «заходовий» верхній паддинг
+   (5.3rem був, щоб контент не ховався під хедер — тепер це робить відступ). */
+@media (max-width: 767px){
+  .support-page #heroCard,
+  .kolir-page:not(.support-page) #heroCard{
+    margin-top: 9.5rem !important;
+    /* верхній просвіт тёмного фону над яскравою плашкою = бічному «вуху» (1rem),
+       як вирівнювали на десктопі. Хедер уже відведено margin-top, тож контент не ховається. */
+    padding-top: 1rem !important;
+  }
+  /* головна: смуга лого візуально по центру висоти між текстом «Нам довіряють»
+     і низом картки (нижнім «вухом») → нижній зазор ≈ верхньому */
+  .kolir-page:not(.support-page) #heroCard{ padding-bottom: 1.8rem !important; }
+}
+
+/* Плаваюча пілюля-хедер: НАЇЖДЖАЄ поверх контенту (герой іде під неї) і лишається
+   зверху при скролі — як у статичному .sticky-nav (position:fixed). Не резервує
+   місце у потоці, тож секції-герої починаються від самого верху сторінки. */
+.site-header {
+  position: fixed;
+  top: 1.4rem;
+  left: 0;
+  right: 0;
+  z-index: 55;
+}
+
+/* Інлайн-стилі зі статичного <head> (позиціювання свайперів) */
+.p-swiper {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  overflow: visible;
+  padding: 2.2rem 0 3.5rem;
+  user-select: none;
+  perspective: 1400px;
+}
+@media (min-width: 1200px) {
+  .t-swiper {
+    position: absolute;
+    left: 16rem;
+    right: 0;
+    top: 1rem;
+    z-index: 6;
+    padding: 0 1rem;
+  }
+}
+
+/* Swiper за замовчуванням ставить overflow:hidden на .swiper. Картка-відгук
+   по висоті точно дорівнює свайперу, тож верхній край (тінь/скруглення)
+   підрізається. Кліппінг має робити стаціонарний .t-cards-clip (його clip-path
+   по вертикалі не ріже) — тому самому свайперу повертаємо overflow:visible. */
+.testimonials .t-cards-clip .t-swiper {
+  overflow: visible;
+}
+
+/* Свайпер позиціонується відносно телефону і сідає ~5px ВИЩЕ контейнера
+   .t-cards-clip, чия верхня кромка зрізала картам верх (плоско обрізані верхні
+   кути). Контейнер і свайпер рухаються разом, тож зсуваємо лише КОНТЕНТ свайпера
+   вниз через padding-top — картки сідають у межі кліпу, верх більше не ріже. */
+@media (min-width: 1200px) {
+  .testimonials .t-cards-clip .t-swiper {
+    padding-top: 0.9rem;
+  }
+}
+
+/* Коверфлоу-портфоліо (support): секція .portfolio мала overflow:hidden, щоб
+   ховати бічні картки по горизонталі — але вона ж зрізала ВЕРХ збільшеної
+   центральної картки. overflow-x:clip ховає горизонталь, overflow-y:visible
+   (з clip це працює, на відміну від hidden) повертає верх. override.css іде
+   останнім, тож перебиває всі дублі support-page.css на десктопі. */
+@media (min-width: 768px) {
+  .support-page .portfolio {
+    overflow-x: clip !important;
+    overflow-y: visible !important;
+  }
+}
+
+/* swiper/css ставить .swiper{overflow:hidden} і перебиває .p-swiper{overflow:visible}
+   (рівна специфічність, swiper/css вантажиться пізніше) → верх збільшеної
+   центральної картки коверфлоу зрізало свайпером. Перебиваємо через ID. Горизонталь
+   не тече: дальні картки коверфлоу мають opacity:0, а html має overflow-x:clip. */
+#portfolioSwiper.p-swiper {
+  overflow: visible !important;
+}
+
+/* Картки коверфлоу — мельче (слот вужчий → і картинка нижча, бо масштабується по
+   ширині; min-height теж нижчий, щоб картка не лишалась високою). */
+@media (min-width: 768px) {
+  .support-portfolio-swiper .swiper-slide {
+    width: 27rem !important;
+  }
+  .support-portfolio-swiper .p-card {
+    min-height: 36rem !important;
+  }
+}
+
+/* Стрілка ↗ на картках слайдера support/volunteer: колір дефолтний (синя без
+   ховера, жовта на ховері). Робимо кружок+стрілку МЕНШИМИ і повертаємо стрілку
+   проти годинникової на 90°. Беханс-попап (.p-link) прибрано з розмітки. */
+.support-portfolio-swiper .support-portfolio-card-go {
+  width: 3.2rem !important;
+  height: 3.2rem !important;
+}
+.support-portfolio-swiper .support-portfolio-card-go svg {
+  width: 1.5rem !important;
+  height: 1.5rem !important;
+  transform: rotate(-90deg) !important;
+}
+
+/* Довгі назви кейсів (укр) не повинні вилазити за межі картки. */
+.support-portfolio-swiper .support-portfolio-card-title {
+  overflow-wrap: break-word !important;
+}
+
+/* Мобілка: фото в картці слайдера притискаємо до НИЗУ картки. Коротка назва (1 рядок)
+   інакше лишала порожнечу під фото. .p-card → flex-колонка, .p-shot → margin-top:auto
+   (зайвий простір іде між назвою і фото, фото завжди врівень з низом). */
+@media (max-width: 767px) {
+  .support-portfolio-swiper .p-card {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .support-portfolio-swiper .p-shot {
+    margin-top: auto !important;
+    flex-shrink: 0 !important;
+  }
+}
+
+/* Заголовки на мобілці: редизайн виставляв Unbounded лише на десктопі
+   (@media min-width:768px), тож на мобільній .hero-title успадковував Stolzl 400,
+   а .ck-form-title — Stolzl 500. Повертаємо Unbounded як на десктопі (вага 900/600).
+   (.services-title/.svc-title навмисно лишаються Stolzl — вони такі й на десктопі.) */
+@media (max-width: 767px) {
+  .hero-title {
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 900;
+  }
+  .ck-form-title {
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 600;
+  }
+  /* Support/Volunteer: support-page.css задає .support-page .hero-title.support-title
+     вагу 300 (0,3,0) і вантажиться у самій сторінці ПІСЛЯ override.css, тож перебиває
+     просте .hero-title. Тут специфічність 0,3,0 + !important → шрифт Unbounded 900
+     як на десктопі (там теж !important, але лише @min-width:768). Покриває і vol-title
+     (волонтерка теж має клас .support-page). */
+  .support-page .hero-title.support-title {
+    font-family: 'Unbounded', sans-serif !important;
+    font-weight: 900 !important;
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   РЕЗИНА футера — ПОСТІЙНИЙ розмір на десктопі (як у хедера). Власна шкала
+   clamp(floor, A+B·vw, max) досягає СТЕЛІ на 1200 і далі не росте, тож на
+   десктопі (≥1200) футер фіксований; 768→1200 — плавний перехід.
+   Мобільний футер (≤767, стек) лишаємо на рідних rem (= дизайн @390).
+   ───────────────────────────────────────────────────────────────────────── */
+@media (min-width: 768px) {
+  .footerk {
+    padding-top: clamp(32px, calc(7.11px + 3.24vw), 46px);
+    padding-bottom: clamp(24px, calc(6.22px + 2.315vw), 34px);
+  }
+  .footerk-copy,
+  .footerk-legal,
+  .footerk-link {
+    font-size: clamp(11px, calc(7.44px + 0.463vw), 13px);
+  }
+  .footerk-logo {
+    width: clamp(80px, calc(62.2px + 2.315vw), 90px);
+  }
+  .footerk-social img {
+    width: clamp(27px, calc(18.1px + 1.157vw), 32px);
+    height: clamp(27px, calc(18.1px + 1.157vw), 32px);
+  }
+  .footerk-top,
+  .footerk-left {
+    gap: clamp(18px, calc(7.33px + 1.389vw), 24px);
+  }
+  .footerk-mid {
+    gap: clamp(16px, calc(5.33px + 1.389vw), 22px);
+  }
+  .footerk-links {
+    gap: clamp(22px, calc(0.67px + 2.778vw), 34px);
+  }
+  .footerk-hr {
+    margin: clamp(24px, calc(6.22px + 2.315vw), 34px) 0;
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   РЕЗИНА хедера (повне меню ≥900). Хедер тут перетинає межу планшет/десктоп
+   (1200), де rem-зум стрибає — тож даємо хедеру ВЛАСНУ плавну шкалу через
+   clamp(min, A+B·vw, max), не прив'язану до rem-смуг: на 900 вміщується,
+   на 1200 не стрибає, на широких не роздувається.
+   Орієнтири: 900px → нижня межа (≈ поточний розмір, вміщується), 1600px → стеля.
+   ───────────────────────────────────────────────────────────────────────── */
+@media (min-width: 900px) {
+  /* Власна шкала ДОСЯГАЄ СТЕЛІ на 1200 і далі НЕ росте — тож на десктопі (≥1200)
+     хедер ПОСТІЙНОГО розміру (резина, не зум): міняється лише ширина пігулки,
+     а лого/шрифти/висота/відступи фіксовані. 900→1200 — плавний перехід (на 900
+     ще вміщується). Усі видимі розміри хедера (вкл. лого, CTA, тоглер) тут. */
+  .site-header .hero-head {
+    height: clamp(56px, calc(32px + 2.667vw), 64px) !important;
+    padding: clamp(7px, calc(1px + 0.667vw), 9px) clamp(20px, calc(-4px + 2.667vw), 28px) !important;
+  }
+  .site-header .hh-left {
+    gap: clamp(33px, calc(6px + 3vw), 42px) !important;
+  }
+  .site-header .hh-left .brand img {
+    height: clamp(28px, calc(13px + 1.667vw), 33px) !important;
+  }
+  .site-header .hh-left .nav {
+    gap: clamp(25px, calc(7px + 2vw), 31px) !important;
+  }
+  .site-header .nav a,
+  .site-header .nav .nav-help {
+    font-size: clamp(12px, calc(4.5px + 0.833vw), 14.5px) !important;
+  }
+  .site-header .hh-right {
+    gap: clamp(17px, calc(2px + 1.667vw), 22px) !important;
+  }
+  .site-header .hh-right .cta-top {
+    font-size: clamp(12px, calc(6px + 0.667vw), 14px) !important;
+  }
+  .site-header .hh-right .lang-cap-b {
+    font-size: clamp(9px, 1vw, 12px) !important;
+  }
+  .site-header .hh-right .lang-cap-b,
+  .site-header .hh-right .cta-top {
+    padding: clamp(6px, 0.667vw, 8px) clamp(13px, calc(4px + 1vw), 16px) !important;
+  }
+}
+
+/* «Контакти» ховаємо на ВУЗЬКОМУ десктопі, де «Допомога Україні» складалась у
+   2 рядки. Поріг 1300, а не 1280: на 1281–1295 усі 5 пунктів ще не вміщуються
+   (перевірено — на 1285 ще переноситься). Ширше — показуємо всі.
+   У бургер-меню (≤899) «Контакти» лишається завжди. */
+@media (min-width: 900px) and (max-width: 1300px) {
+  .site-header .nav .nav-contact {
+    display: none !important;
+  }
+}
+
+/* Відгуки на ПЛАНШЕТІ (768–1199, мобільний слайдер): сусідні картки різко
+   зрізались по краях. Накладаємо горизонтальний fade на саму секцію — крайні
+   картки плавно згасають, а заголовок (по центру) не зачеплений. Зсув .t-stage
+   лишаємо (він центрує активну картку). Мобілку (≤767) не чіпаємо. */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .testimonials {
+    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 8rem, #000 calc(100% - 8rem), transparent 100%);
+            mask-image: linear-gradient(to right, transparent 0, #000 8rem, #000 calc(100% - 8rem), transparent 100%);
+  }
+}
+

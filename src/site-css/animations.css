@@ -1,0 +1,433 @@
+/* =========================================================================
+   Kolir · animations.css
+   Доповнення до style.css — плавні появи, паралакс, мікровзаємодії.
+   Нічого з базових стилів не перевизначає (тільки нові класи/атрибути).
+   ========================================================================= */
+
+/* Початковий стан для scroll-reveal.
+   Ховаємо ТІЛЬКИ коли html.reveal-init (його ставить інлайн-скрипт у <head>
+   лише якщо користувач не просив reduce-motion і JS працює).
+   Якщо GSAP не завантажиться — animations.js зніме клас і все стане видимим. */
+.reveal-init [data-reveal] {
+  opacity: 0;
+  will-change: transform, opacity;
+}
+.reveal-init [data-reveal="up"]    { transform: translate3d(0, 42px, 0); }
+.reveal-init [data-reveal="down"]  { transform: translate3d(0, -42px, 0); }
+.reveal-init [data-reveal="left"]  { transform: translate3d(-48px, 0, 0); }
+.reveal-init [data-reveal="right"] { transform: translate3d(48px, 0, 0); }
+.reveal-init [data-reveal="scale"] { transform: scale(0.92); }
+.reveal-init [data-reveal="fade"]  { transform: none; }
+
+/* Плавний скрол Lenis */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: hidden; }
+
+/* ---- Магнітна / pressable кнопка ---- */
+/* Кнопки: при наведенні — легке підняття вгору + невелика зміна кольору,
+   при відведенні — плавне повернення (без слідування за курсором). */
+[data-magnetic] {
+  transition: transform .25s cubic-bezier(.22,.61,.36,1),
+              filter .25s ease,
+              background-color .25s ease,
+              box-shadow .25s ease;
+}
+[data-magnetic]:hover {
+  transform: translateY(-3px) !important;
+  filter: brightness(1.06);
+}
+[data-magnetic]:active {
+  transform: translateY(-1px) !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-magnetic]:hover { transform: none; }
+}
+
+/* ---- М'яке підсвічування при наведенні на картки сервісів/брифів ---- */
+.svc, .ck-card, .p-card, .briefs-tab {
+  transition: transform .45s cubic-bezier(.22,.61,.36,1),
+              box-shadow .45s cubic-bezier(.22,.61,.36,1);
+}
+
+/* ---- Анімований градієнтний акцент у заголовку hero ---- */
+.t-brand {
+  background-size: 220% 220%;
+  animation: kolir-hue 9s ease-in-out infinite;
+}
+@keyframes kolir-hue {
+  0%, 100% { background-position: 0% 50%; }
+  50%      { background-position: 100% 50%; }
+}
+
+/* ---- Поява лічильників/пунктів послідовно ---- */
+[data-reveal-stagger] > * {
+  will-change: transform, opacity;
+}
+
+/* ---- Кнопка «нагору» ---- */
+.to-top {
+  position: fixed;
+  right: 2.2rem;
+  bottom: 2.2rem;
+  width: 4.6rem;
+  height: 4.6rem;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  background: #5E00CF;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(20px) scale(.8);
+  pointer-events: none;
+  transition: opacity .4s ease, transform .4s cubic-bezier(.22,.61,.36,1), background .3s;
+  z-index: 90;
+  box-shadow: 0 12px 30px rgba(94, 0, 207, .35);
+}
+.to-top.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+.to-top:hover { background: #7a25e6; }
+.to-top svg { width: 1.8rem; height: 1.8rem; }
+
+/* ---- Тонкий прогрес-бар читання сторінки зверху ---- */
+.read-progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, #5E00CF, #FFCB45);
+  z-index: 100;
+  pointer-events: none;
+  transition: width .1s linear;
+}
+
+/* ---- Брифи: плавна плашка-індикатор активної вкладки (десктоп) ---- */
+@media (min-width: 768px){
+  /* Коли індикатор активний — фон самих вкладок прибираємо, його малює плашка */
+  .briefs-tabs.has-tab-ind .briefs-tab{
+    position: relative;
+    z-index: 2;
+    background: transparent;
+    transform: none;
+    transition: color .28s ease;
+  }
+  .briefs-tabs.has-tab-ind .briefs-tab.is-active{
+    background: transparent;
+  }
+  /* Прибираємо СТАРІ кутові зʼєднувачі ("трикутники") активної вкладки —
+     тепер їх малює сама плашка й вони їдуть разом з нею. */
+  .briefs-tabs.has-tab-ind .briefs-tab.is-active::before,
+  .briefs-tabs.has-tab-ind .briefs-tab.is-active::after{
+    content: none;
+  }
+  /* ховаємо роздільну риску одразу праворуч від активної вкладки */
+  .briefs-tabs.has-tab-ind .briefs-tab.is-active + .briefs-tab::before{
+    opacity: 0;
+    transition: opacity .28s ease;
+  }
+
+  /* Відсуваємо вкладки від правого краю панелі, щоб у крайньої вкладки
+     лишалося місце під праве скруглення (край не стає рівним). */
+  .briefs-tabs.has-tab-ind{
+    padding-right: 6rem;
+  }
+  /* Панель завжди зі скругленим верхнім-правим кутом (скасовуємо старе обнулення) */
+  .briefs-body:has(.briefs-tabs.has-tab-ind) .briefs-panel{
+    border-top-right-radius: 3rem !important;
+  }
+
+  /* Морфинг-індикатор: одна цілісна SVG-фігура (скруглений верх + вогнуті
+     зʼєднання з панеллю). Жодних окремих масок → жодних швів/«трикутників». */
+  .briefs-ind-svg{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    pointer-events: none;
+    z-index: 1;
+    transform: translateY(2px);   /* легке перекриття з панеллю */
+    will-change: transform;
+  }
+  .briefs-ind-svg path{ fill: var(--c-white); }
+}
+
+/* ---- Sticky-плашка навігації (зʼявляється при скролі) ---- */
+.sticky-nav{
+  /* При завантаженні — нижче, у потоці сторінки (їде разом зі скролом) */
+  position: absolute;
+  top: 5.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(160rem, calc(100% - 4rem));   /* однакова ширина шапки на всіх сторінках (як на головній) */
+  z-index: 95;
+  transition: box-shadow .4s ease;
+}
+/* Коли скрол доходить до хедера — він прилипає до верху */
+.sticky-nav.is-stuck{
+  position: fixed;
+  top: 1.4rem;
+}
+.sticky-nav.is-stuck .sticky-nav__inner{
+  box-shadow: 0 22px 60px rgba(20, 0, 50, .5);
+}
+/* На внутрішніх сторінках (без hero) плашка завжди зафіксована вгорі */
+.sticky-nav.sticky-nav--top{ position: fixed; top: 1.4rem; }
+@media (min-width: 768px){
+  body:has(.sticky-nav--top){ padding-top: 9.5rem; }
+}
+/* Плашка — основний хедер. Старий хедер усередині hero прибираємо. */
+@media (min-width: 768px){
+  .hero-head{ display: none; }
+  .hero-card{ padding-top: 11.5rem; }
+}
+@media (max-width: 767px){
+  /* на мобільному лишаємо рідний m-top / бургер усередині hero */
+  .sticky-nav{ display: none; }
+}
+.sticky-nav__inner{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 1.2rem 1rem 2.4rem;
+  border-radius: 999px;
+  background: rgba(44, 0, 96, .9);
+  -webkit-backdrop-filter: blur(16px);
+          backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,.14);
+  box-shadow: 0 18px 50px rgba(20, 0, 50, .38);
+}
+.sticky-nav__brand{ display:flex; align-items:center; flex:0 0 auto; }
+.sticky-nav__brand img{ height: 3rem; width:auto; display:block; }
+.sticky-nav__links{
+  display:flex; align-items:center; gap:2.6rem; margin-left:1.2rem;
+}
+.sticky-nav__links a{
+  color: rgba(255,255,255,.85);
+  text-decoration:none;
+  font-size:1.5rem;
+  font-weight:400;
+  white-space:nowrap;
+  transition: color .2s ease;
+}
+.sticky-nav__links a:hover{ color:#fff; }
+.sticky-nav__right{ display:flex; align-items:center; gap:1.4rem; margin-left:auto; }
+.sticky-nav__cta{
+  display:inline-flex; align-items:center;
+  background: var(--yellow, #FFCB45); color:#1c1340;
+  font-weight:600; font-size:1.45rem;
+  padding:1.15rem 2.4rem; border-radius:999px;
+  text-decoration:none; white-space:nowrap;
+  transition: filter .2s ease, transform .2s ease;
+}
+.sticky-nav__cta:hover{ filter:brightness(1.05); }
+
+/* Перемикач мови — капсула (дві кнопки UA/EN). Активна підсвічується через
+   [data-current], який ставить i18n.js — без додаткових скриптів. */
+.lang-cap{
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.lang-cap-b{
+  font: inherit;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  line-height: 1;
+  color: rgba(255,255,255,.62);
+  background: transparent;
+  border: 0;
+  padding: .7rem 1.3rem;
+  cursor: pointer;
+  transition: background .2s ease, color .2s ease;
+}
+.lang-cap-b:hover:not(.is-active){ color: #fff; }
+.lang-cap-b.is-active{
+  background: var(--c-yellow, #FDCC0D);
+  color: #3E0088;
+}
+
+/* Кнопка «Дивитись роботи» під слайдером портфоліо → каталог */
+.p-cta{ display: flex; justify-content: center; margin-top: 2.6rem; }
+.p-all-btn{
+  display: inline-flex; align-items: center; gap: .9rem;
+  background: var(--c-yellow, #FDCC0D); color: #1c1340;
+  font-size: 1.6rem; font-weight: 600;
+  padding: 1.5rem 3.4rem; border-radius: 999px;
+  text-decoration: none;
+  box-shadow: 0 12px 30px rgba(253, 204, 13, .28);
+  transition: filter .2s ease, transform .25s cubic-bezier(.22,.61,.36,1), box-shadow .25s ease;
+}
+.p-all-btn svg{ transition: transform .25s ease; }
+.p-all-btn:hover svg{ transform: translate(2px, -2px); }
+
+@media (max-width:767px){
+  .sticky-nav{ top:.8rem; width: calc(100% - 1.6rem); }
+  .sticky-nav__inner{ padding:.7rem .7rem .7rem 1.5rem; gap:1rem; }
+  .sticky-nav__links{ display:none; }
+  .sticky-nav__brand img{ height:2.6rem; }
+  .sticky-nav__cta{ font-size:1.3rem; padding:1rem 1.8rem; }
+}
+@media (prefers-reduced-motion: reduce){
+  .sticky-nav{ transition: opacity .3s ease; transform: translate(-50%, 0); }
+  .sticky-nav:not(.is-visible){ opacity:0; pointer-events:none; }
+}
+
+/* ---- Хедер і футер — на ширину контенту сторінки (десктоп) ----
+   Раніше їхній вміст був вужчий за секційні картки (зайвий боковий відступ).
+   Вирівнюємо лого/навігацію/перемикач та футер по тих самих краях, що й картки. */
+@media (min-width: 768px){
+  /* Тільки головна/сторінки в .shell — у брифів інша (повноширинна) розкладка */
+  .hero-card .hero-head{
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Футер по ширині плашки-хедера (1260px), як на сторінці портфоліо */
+  .shell .footerk{
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* ---- Hero: статичний фолбек замість green-screen відео ----
+   Показуємо PNG, поки canvas не віддасть перший оброблений кадр.
+   Якщо відео недоступне (file://, заблокований автоплей) — лишається PNG,
+   і зелений кадр НІКОЛИ не зʼявляється. */
+.hero-right .girl-fallback{
+  width: 49.7rem;
+  height: auto;
+  display: block;
+  margin-right: 4rem;
+  margin-top: -6.5rem;
+  position: relative;
+  z-index: 6;
+}
+/* поки відео не підтвердилось — ховаємо canvas (щоб не блимнув зелений) */
+.hero-right:not(.video-ok) .girl{ display: none; }
+/* коли відео працює — ховаємо статичний PNG */
+.hero-right.video-ok .girl-fallback{ display: none; }
+
+@media (max-width: 767px){
+  .hero-right .girl-fallback{
+    width: 44rem;
+    height: 47rem;
+    margin: 0;
+    z-index: 4;
+    transform: translateX(12rem);
+    top: 2rem;
+    object-fit: contain;
+    object-position: bottom center;
+  }
+}
+
+/* ---- Демо-форма (.kform) ---- */
+.kform { display: flex; flex-direction: column; gap: 1.7rem; width: 100%; }
+.kform-row { display: flex; flex-direction: column; gap: .7rem; }
+.kform-label {
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: #2b1d52;
+  letter-spacing: .01em;
+}
+.kform-field { position: relative; display: flex; align-items: stretch; }
+.kform-ico {
+  position: absolute;
+  left: 1.5rem;
+  top: 1.25rem;
+  width: 1.9rem;
+  height: 1.9rem;
+  color: #9a92b3;
+  pointer-events: none;
+  transition: color .25s;
+}
+.kform input,
+.kform textarea {
+  width: 100%;
+  font: inherit;
+  font-size: 1.5rem;
+  line-height: 1.45;
+  color: #1c1340;
+  padding: 1.15rem 1.6rem 1.15rem 4.6rem;
+  border: 1.5px solid rgba(94, 0, 207, .18);
+  border-radius: 12px;
+  background: #fff;
+  outline: none;
+  transition: border-color .25s, box-shadow .25s;
+  resize: vertical;
+}
+.kform textarea { min-height: 7.5rem; }
+/* напівпрозорий приклад у плейсхолдері */
+.kform input::placeholder,
+.kform textarea::placeholder { color: rgba(28, 19, 64, .38); }
+.kform input:focus,
+.kform textarea:focus {
+  border-color: #5E00CF;
+  box-shadow: 0 0 0 4px rgba(94, 0, 207, .12);
+}
+.kform-field:focus-within .kform-ico { color: #5E00CF; }
+.kform .is-invalid { border-color: #e0483d; box-shadow: 0 0 0 4px rgba(224, 72, 61, .12); }
+.kform-btn {
+  align-self: flex-start;
+  font: inherit;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+  background: #5E00CF;
+  border: none;
+  border-radius: 999px;
+  padding: 1.3rem 3rem;
+  cursor: pointer;
+  transition: transform .25s, background .25s, box-shadow .25s;
+  box-shadow: 0 10px 26px rgba(94, 0, 207, .28);
+}
+.kform-btn:hover { background: #7a25e6; }
+.kform-status { margin: 0; font-size: 1.35rem; min-height: 1.2em; color: #6b6485; }
+.kform-status.is-ok { color: #1f9d57; }
+.kform-status.is-error { color: #e0483d; }
+
+/* Форма повністю вертикальна (поля одне під одним) */
+.kform-btn{ margin-top: .3rem; }
+
+/* Повага до reduce-motion: миттєво показуємо все */
+@media (prefers-reduced-motion: reduce) {
+  .reveal-init [data-reveal] { opacity: 1 !important; transform: none !important; }
+  .t-brand { animation: none; }
+  .to-top { transition: opacity .2s; }
+}
+
+/* ── Фірмова закарлючка, що «сама малюється» (BrandSquiggle) ──────────────────
+   Заливка проявляється через маску — товстий штрих по центральній осі, що
+   «прокручується» через stroke-dashoffset (pathLength=1 → працюємо в долях). */
+.brand-squiggle { display: block; overflow: visible; }
+.brand-squiggle__axis {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;            /* старт: маска порожня → заливки не видно */
+}
+.brand-squiggle.is-drawn .brand-squiggle__axis {
+  animation: squiggleDraw var(--squiggle-dur, 1500ms) cubic-bezier(.6, 0, .35, 1) forwards;
+}
+@keyframes squiggleDraw { to { stroke-dashoffset: 0; } }
+
+/* Страхувальний шар: повна заливка, що м'яко проявляється в останній третині
+   «малювання» — закриває ділянки, куди товстий штрих не дотягнувся (тугий гачок).
+   Той самий колір, тож на вже намальованих 95% непомітний; «дотягує» лише решту. */
+.brand-squiggle__safety { opacity: 0; }
+.brand-squiggle.is-drawn .brand-squiggle__safety {
+  animation: squiggleSafety var(--squiggle-dur, 1500ms) linear forwards;
+}
+@keyframes squiggleSafety { 0%, 62% { opacity: 0; } 100% { opacity: 1; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-squiggle__axis { stroke-dashoffset: 0; }   /* показуємо одразу, без руху */
+  .brand-squiggle__safety { opacity: 1; }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "kolir-showcase",
+  "version": "1.0.0",
+  "description": "Kolir — portfolio showcase (Upwork-safe): catalog + case pages only, English, no external links.",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "cross-env NODE_OPTIONS=\"--no-deprecation --max-old-space-size=8000\" next build",
+    "dev": "cross-env NODE_OPTIONS=--no-deprecation next dev",
+    "devsafe": "rm -rf .next && cross-env NODE_OPTIONS=--no-deprecation next dev",
+    "gen:case-locales": "tsx scripts/gen-case-locales.ts",
+    "lint": "cross-env NODE_OPTIONS=--no-deprecation eslint .",
+    "prebuild": "npm run gen:case-locales",
+    "start": "cross-env NODE_OPTIONS=--no-deprecation next start"
+  },
+  "dependencies": {
+    "cross-env": "10.1.0",
+    "next": "16.2.7",
+    "react": "19.2.6",
+    "react-dom": "19.2.6",
+    "sharp": "0.34.2"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.1",
+    "@types/node": "24.12.3",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "eslint": "^9.16.0",
+    "eslint-config-next": "16.2.7",
+    "tailwindcss": "^4.3.1",
+    "tsx": "^4.22.4",
+    "typescript": "6.0.3"
+  },
+  "engines": {
+    "node": ">=24.15.0"
+  }
+}
