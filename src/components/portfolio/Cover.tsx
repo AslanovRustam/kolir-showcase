@@ -26,6 +26,26 @@ export default function Cover({
       className={`relative w-full h-full overflow-hidden ${bgMap[work.color]} ${textCol}`}
       style={{ containerType: 'inline-size' }}
     >
+      {/* Generic cover for newer cases that provide an explicit `cover` path
+          (instead of a hardcoded per-id branch below). */}
+      {work.cover && (
+        <>
+          <img
+            src={`/${work.cover}`}
+            alt=""
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-ink/40 via-transparent to-ink/10"></div>
+          <div className={`absolute inset-0 flex flex-col justify-between ${padding}`}>
+            <div
+              className={`flex items-center justify-between gap-2 font-mono ${labelSize} uppercase tracking-[0.18em] text-white drop-shadow`}
+            >
+              <span className="truncate">{work.client}</span>
+              <span>&apos;{String(work.year).slice(2)}</span>
+            </div>
+          </div>
+        </>
+      )}
       {work.id === '15-krokiv' && (
         <>
           <img
