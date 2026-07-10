@@ -1775,4 +1775,18 @@ export const CASES: CaseItem[] = [
     ] } ],
     links: [],
   },
+  {
+    id: 'tailed-friend', title: 'Tailed Friend', client: 'Tailed Friend · Pet adoption platform', year: 2024,
+    categories: ['Web','Product'], color: 'ink', text: 'cream',
+    teaser: 'A cheerful pet-adoption platform that helps tailed friends find their forever home.',
+    scope: ['UX/UI design','Web design','Brand illustration','Responsive design'],
+    description: 'Tailed Friend is a pet-adoption platform that connects shelters and animals with loving families. We designed a warm, playful web experience — a bold hero that puts adorable cats and dogs front and centre, a clear “how it works” flow, and a friendly system of rounded shapes, paw motifs and a deep-violet, lime and yellow palette that makes adopting feel joyful.',
+    results: ['Marketing website','How-it-works flow','Playful brand system'],
+    cover: 'images/new/pet/64.jpg',
+    gallery: [ { type: 'slider', images: [
+      { src: 'images/new/pet/64.jpg' },
+      { src: 'images/new/pet/gen_how_it_works.png' },
+    ] } ],
+    links: [],
+  },
 ];
