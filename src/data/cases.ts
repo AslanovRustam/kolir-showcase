@@ -1757,4 +1757,22 @@ export const CASES: CaseItem[] = [
     ] } ],
     links: [],
   },
+  {
+    id: 'bluffin', title: 'Bluffin', client: 'Bluffin Squad · Crypto & traffic arbitrage', year: 2024,
+    categories: ['Branding','Web','Product'], color: 'ink', text: 'cream',
+    teaser: 'A bold identity and product system for Bluffin — a crypto & traffic arbitrage team.',
+    scope: ['Brand identity','Logo & symbol','Brand guidelines','Web & product UI','Mobile app design','Marketing & social'],
+    description: 'Bluffin (Bluffin Squad) is a crypto and traffic-arbitrage team that needed an identity as fast and confident as the deals it chases. We built the brand from the ground up — a custom rounded-pixel wordmark with a signature lime-green double-chevron accent, a flexible “b” app-icon and a documented logo system — then extended the language into a product surface (landing hero and dashboard UI), an App Store campaign, branded merch and stationery, and a social-media kit. Electric blue, acid lime and charcoal keep every touchpoint high-energy and unmistakably Bluffin.',
+    results: ['Logo & identity system','Brand guidelines','Landing hero & dashboard UI','App-store advertising','Merch, stationery & social kit'],
+    cover: 'images/new/bluffin/shot_v4_4.jpg',
+    gallery: [ { type: 'slider', images: [
+      { src: 'images/new/bluffin/gen_hero.png' },
+      { src: 'images/new/bluffin/gen_logo_rules.png' },
+      { src: 'images/new/bluffin/shot_v1.jpg' },
+      { src: 'images/new/bluffin/shot_v3.jpg' },
+      { src: 'images/new/bluffin/gen_app_ad.png' },
+      { src: 'images/new/bluffin/shot_v4_5.jpg' },
+    ] } ],
+    links: [],
+  },
 ];
