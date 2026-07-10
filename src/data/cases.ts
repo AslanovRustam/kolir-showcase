@@ -1163,7 +1163,7 @@ export const CASES: CaseItem[] = [
     links: [],
   },
   {
-    id: 'planty', title: 'Planty App', client: 'Planty · Plant Care App', year: 2025,
+    id: 'planty', title: 'Planty App', client: 'Planty · Plant Care App', year: 2023,
     categories: ['Product','Branding','Motion'], color: 'ink', text: 'cream',
     teaser: 'A mobile app that helps people take easy care of their plants.',
     scope: ['UX research','Information architecture','Brand identity','Mobile UI','Motion','Promo website'],
