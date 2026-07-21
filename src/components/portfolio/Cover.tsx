@@ -46,41 +46,6 @@ export default function Cover({
           </div>
         </>
       )}
-      {work.id === '15-krokiv' && (
-        <>
-          <img
-            src="/images/15_krokiv/cover.jpg"
-            alt=""
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-ink/15 via-transparent to-transparent"></div>
-          <div className={`absolute inset-0 flex flex-col justify-between ${padding}`}>
-            <div
-              className={`flex items-center justify-between font-mono ${labelSize} uppercase tracking-[0.2em] text-ink/70`}
-            >
-              <span>будь у курсі · 15 кроків</span>
-              <span>’26</span>
-            </div>
-          </div>
-        </>
-      )}
-      {work.id === 'strichka' && (
-        <>
-          <img
-            src="/images/strichka/cover.jpg"
-            alt=""
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-          <div className={`absolute inset-0 flex flex-col justify-between ${padding}`}>
-            <div
-              className={`flex items-center justify-between font-mono ${labelSize} uppercase tracking-[0.2em] text-ink/55`}
-            >
-              <span>strichka · ui/ux</span>
-              <span>’26</span>
-            </div>
-          </div>
-        </>
-      )}
       {work.id === 'nakotne' && (
         <>
           <img

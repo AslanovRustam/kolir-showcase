@@ -138,28 +138,6 @@ export interface UkOverride {
 /* ===================== Ukrainian overrides ===================== */
 
 export const UK_OVERRIDES: Record<string, UkOverride> = {
-  '15-krokiv': {
-    title: '15 кроків до єдності',
-    client: 'Будь у курсі · українська єдність',
-    teaser: '15 кроків до української єдності — редакційна історія й айдентика для «Будь у курсі».',
-    description: '«15 кроків до української єдності» — візуальна історія для «Будь у курсі», що пригадує кроки, які нації довелося зробити на шляху до єдності. Ми створили концепцію, ілюстративну мову, типографіку й логотип, а потім зібрали все в єдиний лонгрід — червоне на кремовому, пронизане українським орнаментом і символами.',
-    scope: ['Концепція','Редакційний дизайн','Ілюстрація','Логотип та айдентика','Веб-верстка'],
-    results: ['Лонгрід','Набір ілюстрацій','Логотип і написання','Веб-верстка'],
-    gallery: {
-      1: {
-        heading: 'Логотип · пошук',
-        body: 'До фінального логотипа ми дослідили цілий набір знаків — кожен зібраний зі словника українських символів: тризуб (державний герб), калина й соняшник, пшеничні колоски та снопи, лелека й журавель, козак з оселедцем, бандура, сільська церква та геометрія вишиванки. З різних причин ці варіанти не дійшли до фіналу — але ми хочемо, щоб ви теж їх побачили.',
-      },
-    },
-  },
-  'strichka': {
-    title: 'Strichka',
-    client: 'Strichka · спільнота українців за кордоном',
-    teaser: 'Сайт і UI/UX для Strichka — платформи українців, що діють за кордоном.',
-    description: 'Strichka — спільнота, що обʼєднує українців по всьому світу, щоб діяти заради України: координувати кампанії, ініціативи та медіа. Ми спроєктували повний веб-досвід — чіткий, впевнений інтерфейс навколо національної ідентичності, від промо-сайту до продуктових сценаріїв.',
-    scope: ['UX/UI дизайн','Веб-дизайн','Візуальна айдентика','Адаптивна верстка'],
-    results: ['Промо-сайт','Адаптивний UI','Дизайн-система','Візуал у дусі бренду'],
-  },
   'ice-dating': {
     title: 'ICE Dating',
     client: 'ICE Dating · платформа онлайн-знайомств',
@@ -530,77 +508,6 @@ export const UK_OVERRIDES: Record<string, UkOverride> = {
 /* ====================== English base data ===================== */
 
 export const CASES: CaseItem[] = [
-  {
-    id: '15-krokiv', title: '15 Steps to Unity', client: 'Будь у курсі · Ukrainian unity', year: 2026,
-    categories: ['Branding','Editorial'], color: 'cream', text: 'ink',
-    teaser: '15 steps to Ukrainian unity — an editorial & identity story for Будь у курсі.',
-    scope: ['Concept','Editorial design','Illustration','Logo & identity','Web layout'],
-    description: '“15 steps to Ukrainian unity” — a visual story for Будь у курсі that recalls the steps the nation had to take towards unity. We built the concept, the illustration language, the type and the logo, then laid it out as a long-form editorial piece — red on cream, woven through with Ukrainian ornament and symbols.',
-    results: ['Long-form editorial','Custom illustration set','Logo & wordmark','Web layout'],
-    gallery: [
-      { type: 'group', images: [
-        { src: 'images/15_krokiv/1.jpg' },
-        { src: 'images/15_krokiv/2.jpg' },
-        { src: 'images/15_krokiv/3.jpg' },
-        { src: 'images/15_krokiv/4.jpg' },
-        { src: 'images/15_krokiv/5.jpg' },
-        { src: 'images/15_krokiv/6.jpg' },
-        { src: 'images/15_krokiv/7.jpg' },
-        { src: 'images/15_krokiv/8.jpg' },
-        { src: 'images/15_krokiv/9.jpg' },
-        { src: 'images/15_krokiv/10.jpg' },
-        { src: 'images/15_krokiv/11.jpg' },
-        { src: 'images/15_krokiv/12.jpg' },
-        { src: 'images/15_krokiv/13.jpg' },
-      ]},
-      { type: 'text', heading: 'Logo · exploration',
-        body: 'Before the final logo we explored a whole set of marks — each built from a vocabulary of Ukrainian symbols: the tryzub (trident, the national coat of arms), kalyna (viburnum) and the sunflower, wheat ears and sheaves, the stork and the crane, the Cossack with his oseledets forelock, the bandura, the village church, and vyshyvanka cross-stitch geometry. For different reasons these directions never made the final cut — but we wanted you to see them too.' },
-      { type: 'logos', images: [
-        'images/15_krokiv/logo/1.jpg',
-        'images/15_krokiv/logo/2.jpg',
-        'images/15_krokiv/logo/3.jpg',
-        'images/15_krokiv/logo/4.jpg',
-        'images/15_krokiv/logo/5.jpg',
-        'images/15_krokiv/logo/6.jpg',
-        'images/15_krokiv/logo/7.jpg',
-        'images/15_krokiv/logo/8.jpg',
-        'images/15_krokiv/logo/9.jpg',
-        'images/15_krokiv/logo/10.jpg',
-      ]},
-    ],
-    links: [
-      { label: 'View on Behance', url: '#', kind: 'social' },
-    ],
-  },
-  {
-    id: 'strichka', title: 'Strichka', client: 'Strichka · Ukrainian community abroad', year: 2026,
-    categories: ['Web','Product'], color: 'ink', text: 'cream',
-    teaser: 'Website & UI/UX for Strichka — a platform for Ukrainians acting abroad.',
-    scope: ['UX/UI design','Web design','Visual identity','Responsive layout'],
-    description: 'Strichka is a community platform that unites Ukrainians around the world to act for Ukraine — coordinating campaigns, initiatives and media. We designed the full web experience: a clear, confident interface built around the national identity, from the marketing site to the in-product flows.',
-    results: ['Marketing website','Mobile-responsive UI','Design system','Brand-aligned visuals'],
-    gallery: [
-      { type: 'group', images: [
-        { src: 'images/strichka/1.jpg' },
-        { src: 'images/strichka/2.jpg' },
-        { src: 'images/strichka/3.jpg' },
-        { src: 'images/strichka/4.jpg' },
-        { src: 'images/strichka/5.jpg' },
-        { src: 'images/strichka/6.jpg' },
-        { src: 'images/strichka/7.jpg' },
-        { src: 'images/strichka/8.jpg' },
-        { src: 'images/strichka/9.jpg' },
-        { src: 'images/strichka/10.jpg' },
-        { src: 'images/strichka/11.jpg' },
-        { src: 'images/strichka/12.jpg' },
-        { src: 'images/strichka/13.jpg' },
-        { src: 'images/strichka/14.jpg' },
-      ]},
-    ],
-    links: [
-      { label: 'View on Behance', url: '#', kind: 'social' },
-    ],
-  },
   {
     id: 'ice-dating', title: 'ICE Dating', client: 'ICE Dating · Online dating platform', year: 2023,
     categories: ['Web','Product'], color: 'lilac', text: 'ink',
