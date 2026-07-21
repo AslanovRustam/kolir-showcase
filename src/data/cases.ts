@@ -1653,17 +1653,6 @@ export const CASES: CaseItem[] = [
     links: [],
   },
   {
-    id: 'arter', title: 'Arter', client: 'Arter · NFT marketplace', year: 2025,
-    categories: ['Product','Web'], color: 'ink', text: 'cream',
-    teaser: 'A bold marketplace concept for buying and selling single-edition, colorful digital artworks.',
-    scope: ['UI/UX design','Web design','Art direction'],
-    description: 'Arter is a marketplace for unique, single-edition NFT artworks. The interface pairs a monochrome sidebar with vivid neon collection cards, live ETH bids and creator stats — a striking, gallery-like browsing experience.',
-    results: ['Marketplace UI','Neon visual system','Bid & stats hierarchy'],
-    cover: 'images/new/nft/1.jpg',
-    gallery: [ { type: 'slider', images: [ { src: 'images/new/nft/1.jpg' } ] } ],
-    links: [],
-  },
-  {
     id: 'nitrium', title: 'Nitrium', client: 'Nitrium · Crypto trading platform', year: 2025,
     categories: ['Branding'], color: 'ink', text: 'cream',
     teaser: 'A vibrant, molecular-inspired brand identity for a next-generation cryptocurrency platform.',
