@@ -14,7 +14,6 @@ const FORCE_LOCALES: Record<string, Partial<{ uk: boolean; en: boolean }>> = {
   ctendo: { uk: false },          // Ctendo Group — лише EN
   'wirex-brand': { uk: false, en: false }, // Wirex 2026 — приховано повністю
   'wirex-banners': { uk: false }, // Wirex Campaigns — лише EN
-  'med-bat': { en: false },       // Окремий медичний батальйон — поки лише UA
 }
 
 function computeLocales(work: CaseItem): { uk: boolean; en: boolean } {
