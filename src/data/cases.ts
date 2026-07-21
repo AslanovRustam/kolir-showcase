@@ -1777,12 +1777,17 @@ export const CASES: CaseItem[] = [
     description: 'cliCar is a premium car-rental brand built around instant, phone-first booking. The design pairs a clean editorial layout with electric accent colours and topographic line motifs, spotlighting hero vehicles with 360° views, transparent hourly pricing and scan-to-rent QR codes.',
     results: ['Brand & visual system','Marketing website','Rent-in-one-click flow'],
     cover: 'images/Kolir_Cases/clicar/clicar-01.jpg',
-    gallery: [ { type: 'slider', images: [
+    gallery: [
+    { type: 'group', images: [
       { src: 'images/Kolir_Cases/clicar/clicar-01.jpg' },
       { src: 'images/Kolir_Cases/clicar/clicar-02.jpg' },
+    ] },
+    { type: 'text', heading: 'Choosing the car is the product', body: 'The rental flow is built around the moment of choice: the model held large and clean, specs kept short, and dates and pickup pushed forward so the booking never competes with the car for attention.' },
+    { type: 'group', images: [
       { src: 'images/Kolir_Cases/clicar/clicar-03.jpg' },
       { src: 'images/Kolir_Cases/clicar/clicar-04.jpg' },
-    ] } ],
+    ] },
+    ],
     links: [],
   },
   {
@@ -1880,13 +1885,18 @@ export const CASES: CaseItem[] = [
     description: 'A card product that sells freedom rather than finance. We built the whole page around one bright yellow stage: 3D characters and ribbons tumbling around a matte black card, an oversized wordmark, and a single promise - more options, more freedom - with over twenty card features worldwide.',
     results: ['Landing page','3D key visuals','Card visual design','Brand system'],
     cover: 'images/Kolir_Cases/bank-yellow/bank-yellow-01.jpg',
-    gallery: [ { type: 'slider', images: [
+    gallery: [
+    { type: 'group', images: [
       { src: 'images/Kolir_Cases/bank-yellow/bank-yellow-01.jpg' },
       { src: 'images/Kolir_Cases/bank-yellow/bank-yellow-02.jpg' },
+    ] },
+    { type: 'text', heading: 'More options, more freedom', body: 'The card is sold on freedom, not on banking. A single yellow stage, 3D characters tumbling around a matte black card, and one promise carried through to the order flow: over twenty card features that work worldwide.' },
+    { type: 'group', images: [
       { src: 'images/Kolir_Cases/bank-yellow/bank-yellow-03.jpg' },
       { src: 'images/Kolir_Cases/bank-yellow/bank-yellow-04.jpg' },
       { src: 'images/Kolir_Cases/bank-yellow/bank-yellow-05.jpg' },
-    ] } ],
+    ] },
+    ],
     links: [],
   },
   {
@@ -1933,13 +1943,18 @@ export const CASES: CaseItem[] = [
     description: 'Chili sells heat, so the site does too. Flames, chilli peppers and crumbs fly across a deep red stage while the menu stays calm and shoppable underneath - price cards for burgers, tacos and salads, a running basket, delivery and happy-hours entries in the top navigation.',
     results: ['Restaurant website','Menu & ordering UI','Food art direction'],
     cover: 'images/Kolir_Cases/chili/chili-01.jpg',
-    gallery: [ { type: 'slider', images: [
+    gallery: [
+    { type: 'group', images: [
       { src: 'images/Kolir_Cases/chili/chili-01.jpg' },
       { src: 'images/Kolir_Cases/chili/chili-02.jpg' },
+    ] },
+    { type: 'text', heading: 'Heat you can order', body: 'The flames carry the mood, but the menu underneath stays flatly shoppable: price cards for chicken, burgers, tacos and salads, a running basket, and delivery and happy hours reachable from every screen.' },
+    { type: 'group', images: [
       { src: 'images/Kolir_Cases/chili/chili-03.jpg' },
       { src: 'images/Kolir_Cases/chili/chili-04.jpg' },
       { src: 'images/Kolir_Cases/chili/chili-05.jpg' },
-    ] } ],
+    ] },
+    ],
     links: [],
   },
   {
@@ -2073,12 +2088,17 @@ export const CASES: CaseItem[] = [
     description: 'Ensenso is a crypto wallet built for investing rather than trading. We kept the surface quiet and dark so the numbers lead: a live rate list, a buy-and-sell widget with instant conversion, an invest-wallet summary, and totals for daily investment, marketplace volume and available funds along the bottom.',
     results: ['Marketing site','Wallet & trading UI','Rate and portfolio widgets','Dark design system'],
     cover: 'images/Kolir_Cases/ensenso/ensenso-01.jpg',
-    gallery: [ { type: 'slider', images: [
+    gallery: [
+    { type: 'group', images: [
       { src: 'images/Kolir_Cases/ensenso/ensenso-01.jpg' },
       { src: 'images/Kolir_Cases/ensenso/ensenso-02.jpg' },
+    ] },
+    { type: 'text', heading: 'Investing, not trading', body: 'Ensenso is built for people putting money away rather than watching charts. Live rates and a buy-and-sell widget with instant conversion sit on a deliberately quiet dark surface, so the portfolio totals are the loudest thing on the page.' },
+    { type: 'group', images: [
       { src: 'images/Kolir_Cases/ensenso/ensenso-03.jpg' },
       { src: 'images/Kolir_Cases/ensenso/ensenso-04.jpg' },
-    ] } ],
+    ] },
+    ],
     links: [],
   },
   {
@@ -2141,13 +2161,18 @@ export const CASES: CaseItem[] = [
     description: 'Homefit brings the full picture of your fitness - activity history, workouts and trends from Apple Watch - into one view. We built a charcoal-and-acid-yellow stage around a mid-rep athlete, floated live heart-rate and rep cards over the photography, and put the join field directly under the claim.',
     results: ['Marketing website','Sign-up flow','App feature screens','Brand visuals'],
     cover: 'images/Kolir_Cases/homefit/homefit-01.jpg',
-    gallery: [ { type: 'slider', images: [
+    gallery: [
+    { type: 'group', images: [
       { src: 'images/Kolir_Cases/homefit/homefit-01.jpg' },
       { src: 'images/Kolir_Cases/homefit/homefit-02.jpg' },
+    ] },
+    { type: 'text', heading: 'One view of everything', body: 'Homefit pulls activity history, workouts and trends out of Apple Watch and puts them in a single view, so a session is judged on real numbers rather than memory. Live heart rate and rep counts sit over the workout itself.' },
+    { type: 'group', images: [
       { src: 'images/Kolir_Cases/homefit/homefit-03.jpg' },
       { src: 'images/Kolir_Cases/homefit/homefit-04.jpg' },
       { src: 'images/Kolir_Cases/homefit/homefit-05.jpg' },
-    ] } ],
+    ] },
+    ],
     links: [],
   },
   {
@@ -2283,12 +2308,17 @@ export const CASES: CaseItem[] = [
     description: 'A marketplace built for a drop weekend: neon violet, classical statues recoloured into vapourwave, diagonal sale ribbons cutting the corners, a hot lot with live bid and countdown, and a waitlist button holding the top right while popular categories scroll underneath.',
     results: ['Marketplace website','Auction & bidding UI','Promo campaign visuals'],
     cover: 'images/Kolir_Cases/nft-store/nft-store-01.jpg',
-    gallery: [ { type: 'slider', images: [
+    gallery: [
+    { type: 'group', images: [
       { src: 'images/Kolir_Cases/nft-store/nft-store-01.jpg' },
       { src: 'images/Kolir_Cases/nft-store/nft-store-02.jpg' },
+    ] },
+    { type: 'text', heading: 'Built for a drop weekend', body: 'Everything is tuned for urgency: a hot lot with a live bid and countdown, diagonal sale ribbons cutting the corners, and a waitlist button pinned top-right while popular categories scroll underneath.' },
+    { type: 'group', images: [
       { src: 'images/Kolir_Cases/nft-store/nft-store-03.jpg' },
       { src: 'images/Kolir_Cases/nft-store/nft-store-04.jpg' },
-    ] } ],
+    ] },
+    ],
     links: [],
   },
   {
@@ -2316,17 +2346,25 @@ export const CASES: CaseItem[] = [
     description: 'djuice is cold-pressed, organic and honest about it. We built the store on citrus orange with violet and lime accents, floated the bottles against splashes and fruit, and made the flavour range - orange, citrus, pineapple - the primary navigation, with the no-added-sugar promise repeated where it matters.',
     results: ['E-commerce website','Flavour & product pages','Packaging visuals','Brand system'],
     cover: 'images/Kolir_Cases/organic-juice/organic-juice-01.jpg',
-    gallery: [ { type: 'slider', images: [
+    gallery: [
+    { type: 'group', images: [
       { src: 'images/Kolir_Cases/organic-juice/organic-juice-01.jpg' },
       { src: 'images/Kolir_Cases/organic-juice/organic-juice-02.jpg' },
       { src: 'images/Kolir_Cases/organic-juice/organic-juice-03.jpg' },
+    ] },
+    { type: 'text', heading: 'Cold-pressed, and honest about it', body: 'The range navigates by flavour rather than by category, so orange, citrus and pineapple each get their own stage. The no-added-sugar promise is repeated where a customer actually decides, not buried in the footer.' },
+    { type: 'group', images: [
       { src: 'images/Kolir_Cases/organic-juice/organic-juice-04.jpg' },
       { src: 'images/Kolir_Cases/organic-juice/organic-juice-05.jpg' },
       { src: 'images/Kolir_Cases/organic-juice/organic-juice-06.jpg' },
+    ] },
+    { type: 'text', heading: 'Packaging as the interface', body: 'Bottles are shot against splashes and cut fruit and reused as the primary navigation, which keeps the shelf and the storefront reading as one brand.' },
+    { type: 'group', images: [
       { src: 'images/Kolir_Cases/organic-juice/organic-juice-07.jpg' },
       { src: 'images/Kolir_Cases/organic-juice/organic-juice-08.jpg' },
       { src: 'images/Kolir_Cases/organic-juice/organic-juice-09.jpg' },
-    ] } ],
+    ] },
+    ],
     links: [],
   },
   {
@@ -2393,12 +2431,17 @@ export const CASES: CaseItem[] = [
     description: 'A payment card aimed at people who do not read banking sites. Acid green on deep magenta, melted smileys in the margins, a chrome hand offering the card mid-air, an optical-stripe card face - and under all of it a plain apply-by-email field with customer and volume counts.',
     results: ['Landing page','Card visual design','3D key visuals','Brand system'],
     cover: 'images/Kolir_Cases/smart-card/smart-card-01.jpg',
-    gallery: [ { type: 'slider', images: [
+    gallery: [
+    { type: 'group', images: [
       { src: 'images/Kolir_Cases/smart-card/smart-card-01.jpg' },
       { src: 'images/Kolir_Cases/smart-card/smart-card-02.jpg' },
+    ] },
+    { type: 'text', heading: 'Loud on the outside, plain underneath', body: 'Acid green on deep magenta, melted smileys, a chrome hand offering the card mid-air — and under all of it a plain apply-by-email field with the customer and volume counts doing the reassuring.' },
+    { type: 'group', images: [
       { src: 'images/Kolir_Cases/smart-card/smart-card-03.jpg' },
       { src: 'images/Kolir_Cases/smart-card/smart-card-04.jpg' },
-    ] } ],
+    ] },
+    ],
     links: [],
   },
   {
