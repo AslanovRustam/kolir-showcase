@@ -691,7 +691,6 @@ export const CASES: CaseItem[] = [
         { src: 'images/1st_legion/2.jpg', topFade: true },
         { src: 'images/1st_legion/3.jpg' },
         { src: 'images/1st_legion/4.jpg' },
-        { src: 'images/1st_legion/5.mp4' },
         { src: 'images/1st_legion/6.jpg' },
         { src: 'images/1st_legion/7.jpg' },
         { src: 'images/1st_legion/10.mp4' },
