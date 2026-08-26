@@ -112,7 +112,8 @@ function Slider({ images }: { images: GalleryImage[] }) {
           →
         </button>
       )}
-      <div className="flex justify-center gap-1.5 mt-3">
+      {/* Один борд — керування не потрібне (ні стрілок, ні крапок). */}
+      <div className={`flex justify-center gap-1.5 mt-3 ${images.length < 2 ? 'hidden' : ''}`}>
         {images.map((_, i) => (
           <button
             key={i}
@@ -296,8 +297,15 @@ export default function CaseDetail({
                 switch (item.type) {
                   case 'text':
                     return (
-                      <div key={i} className="col-span-12 reveal py-3 md:py-6">
-                        <div className="max-w-[68ch]">
+                      // Текстовий блок ЗАВЖДИ підводить до наступних бордів (заголовок
+                      // розділу + опис того, що йде далі), тож притискаємо його до
+                      // блока знизу: великий відступ зверху, майже нульовий знизу —
+                      // інакше текст висить посередині й незрозуміло, до чого він.
+                      <div key={i} className="col-span-12 reveal pt-8 pb-0 md:pt-12 md:pb-0">
+                        {/* [&>*:last-child]:mb-0 — знімає хвостовий margin-bottom
+                            останнього рядка (base-стиль p { margin-bottom: 1em }),
+                            який інакше додає ~18px до відступу до наступного борда. */}
+                        <div className="max-w-[520px] [&>*:last-child]:mb-0">
                           {item.heading && (
                             <div className="font-sans font-medium text-[18px] text-sun mb-3">
                               {item.heading}
