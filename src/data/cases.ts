@@ -1225,6 +1225,128 @@ export const CASES: CaseItem[] = [
     ],
   },
 
+  /* ========================= Logofolio (client marks) =========================
+   * Збірка логотипів: 4 повні презентаційні борди (Ran-Ran … House of Voi) —
+   * витяги з набору на 18 бордів — і 12 компактних бордів з Upwork-набору.
+   * Обкладинка = перший борд галереї (logofolio-01). Англійська, без UA-оверрайдів. */
+  {
+    id: 'logofolio', title: 'Logofolio', client: 'Logofolio · Selected marks & identities', year: 2026,
+    categories: ['Branding'], color: 'sun', text: 'ink',
+    teaser: 'Sixteen logo systems — investment holdings, cell therapy, hospitality, gaming and betting brands.',
+    scope: ['Logo design','Brand identity','Colour & type systems','Icon & app marks','Mockups & applications'],
+    description: 'A selection of logo and identity work across finance, medicine, hospitality, gaming, betting, events and recruiting. Each mark is delivered as a full presentation board — the lock-up, the colour palette, icon and app-mark variants, and the applications that prove it survives contact with the real world: packaging, merchandise, interfaces, signage and pattern systems.',
+    results: ['16 logo systems','Full presentation boards','Icon and app-mark sets','Applications & pattern systems'],
+    cover: 'images/Kolir_Cases/logofolio/logofolio-01.jpg',
+    gallery: [
+    { type: 'group', images: [ { src: 'images/Kolir_Cases/logofolio/logofolio-01.jpg' } ] },
+
+    { type: 'text', heading: 'Ran-Ran Holdings · Investment holding', body: 'A bold geometric monogram of interlocking R shapes for an investment holding focused on strategic growth and next-generation businesses. Purple-to-violet with white and black accents, tested as app icons, on the website and across merchandising.' },
+    { type: 'group', images: [ { src: 'images/Kolir_Cases/logofolio/logofolio-02.jpg' } ] },
+
+    { type: 'text', heading: 'Stemify · Regenerative medicine', body: 'A leaf-inspired geometric mark paired with a refined serif for a cell-therapy and anti-aging company. Soft blues, teals and neutrals keep the tone clinical rather than cosmetic, and the icon holds up across packaging, interfaces and clinical materials.' },
+    { type: 'group', images: [ { src: 'images/Kolir_Cases/logofolio/logofolio-03.jpg' } ] },
+
+    { type: 'text', heading: 'Zggly · Digital platform', body: 'A minimal mark built from intersecting shapes for a connectivity and lifestyle platform. Deep blue and white scale from the app icon to a tote bag, a hoodie and printed tape without losing the geometry.' },
+    { type: 'group', images: [ { src: 'images/Kolir_Cases/logofolio/logofolio-04.jpg' } ] },
+
+    { type: 'text', heading: 'House of Voi · Luxury hospitality', body: 'Elegant serif type with a star accent set inside the O, for a hotel, spa and lifestyle brand. Deep emerald, gold and cream carry from room amenities and menus through to signage and the building facade.' },
+    { type: 'group', images: [ { src: 'images/Kolir_Cases/logofolio/logofolio-05.jpg' } ] },
+
+    { type: 'text', heading: 'Traffic Market · E-commerce', body: 'A shopping cart with a rising sun inside it, drawn in one continuous weight so it still reads at favicon size. Yellow on charcoal, with a supporting icon set — diamonds, thumbs-up, smileys — that doubles as the brand pattern.' },
+    { type: 'group', images: [ { src: 'images/Kolir_Cases/logofolio/logofolio-06.jpg' } ] },
+
+    { type: 'text', heading: 'SPT · Sports & performance', body: 'An italic wordmark cut through by green orbit rings, giving speed and motion to a sports brand. Royal blue holds the base, with a secondary layer of dots, arcs and rings for campaign surfaces.' },
+    { type: 'group', images: [ { src: 'images/Kolir_Cases/logofolio/logofolio-07.jpg' } ] },
+
+    { type: 'text', heading: 'Meet Future Event · Event brand', body: 'An MFE monogram built from angled bars that shift purple to magenta, reading as forward motion. The same bars tile into a high-contrast pattern for badges, screens and event collateral.' },
+    { type: 'group', images: [ { src: 'images/Kolir_Cases/logofolio/logofolio-08.jpg' } ] },
+
+    { type: 'text', heading: 'GameNest · Gaming', body: 'A spiral mark that resolves into both a nest and a controller thumbstick, in an orange-to-magenta gradient. Set on near-black, with the swirl repeated as a quiet tonal pattern.' },
+    { type: 'group', images: [ { src: 'images/Kolir_Cases/logofolio/logofolio-09.jpg' } ] },
+
+    { type: 'text', heading: 'AstraBet · Sports betting', body: 'An italic split-colour wordmark — green against white — for a sports betting platform. The pattern layer mixes footballs, chips, tickets and trophies, so the brand can go loud without touching the logo itself.' },
+    { type: 'group', images: [ { src: 'images/Kolir_Cases/logofolio/logofolio-10.jpg' } ] },
+
+    { type: 'text', heading: 'Plan Games · Game studio', body: 'A thin geometric wordmark where vertical rules slice through the letters, carrying the line “your game — your plan”. Shown flat, on dark stone, and in a glossy slot-reel treatment for casino-facing use.' },
+    { type: 'group', images: [ { src: 'images/Kolir_Cases/logofolio/logofolio-11.jpg' } ] },
+
+    { type: 'text', heading: 'SpeedLine Hub · Recruiting', body: 'Spaced sans caps with a coral script line running through them, for a personnel-search agency. The same coral ellipse is reused to underline the claim — reliable partner in personnel search.' },
+    { type: 'group', images: [ { src: 'images/Kolir_Cases/logofolio/logofolio-12.jpg' } ] },
+
+    { type: 'text', heading: 'Coins Game · Gaming platform', body: 'A pill-shaped wordmark with a starred coin standing in for the O, gold on navy. The compact COG lock-up keeps the same silhouette for avatars, and a photographic fill variant handles bright backgrounds.' },
+    { type: 'group', images: [ { src: 'images/Kolir_Cases/logofolio/logofolio-13.jpg' } ] },
+
+    { type: 'text', heading: 'Binawin · Casino', body: 'A crowned lowercase “a” sits at the centre of the wordmark, so the letter can detach and work as a standalone mark. Orange and black, with a glossy club suit for promo units and calls to action.' },
+    { type: 'group', images: [ { src: 'images/Kolir_Cases/logofolio/logofolio-14.jpg' } ] },
+
+    { type: 'text', heading: 'BeeBet · Betting', body: 'A bee face built inside a gear ring — eyes, antennae and smile all cut from a single yellow shape. Charcoal on yellow, with the ring repeated as a tonal grid.' },
+    { type: 'group', images: [ { src: 'images/Kolir_Cases/logofolio/logofolio-15.jpg' } ] },
+
+    { type: 'text', heading: 'VerifiedX · Verification & identity', body: 'Outlined caps that fade from solid to hairline, paired with a fingerprint-like topographic square. Acid green on near-black, with the contour lines blown up into a full-bleed pattern.' },
+    { type: 'group', images: [ { src: 'images/Kolir_Cases/logofolio/logofolio-16.jpg' } ] },
+
+    { type: 'text', heading: 'Nulltopia · Digital brand', body: 'A retro sunset disc with horizontal slices, matched by a wordmark whose letters are cut the same way. A green-to-cyan gradient on black, plus a flat monochrome lock-up for single-colour use.' },
+    { type: 'group', images: [ { src: 'images/Kolir_Cases/logofolio/logofolio-17.jpg' } ] },
+    ],
+    links: [],
+  },
+
+  /* ======================= Presentations (deck design) =======================
+   * Дизайн презентацій: борди йдуть послідовно, кожен окремим `group`-блоком.
+   * FiberFila і Wirex Academy обкладинки не мають — беремо перший борд (-01).
+   * Polosatik має власну обкладинку (polosatik-cover), тож галерея починається
+   * одразу з титульного слайда деку. Англійська, без UA-оверрайдів. */
+  {
+    id: 'fiberfila', title: 'FiberFila', client: 'Fiber · IoT well-pad monitoring', year: 2025,
+    categories: ['Editorial'], color: 'ink', text: 'cream',
+    teaser: 'A confidential investment deck for an IoT company monitoring oil and gas well pads.',
+    scope: ['Presentation design','Data visualisation','3D & iconography','Layout system'],
+    description: 'An investment deck for an IoT company that monitors oil and gas well pads end to end — sensors, LoRaWAN network, dashboards and managed services. The slide system is built on a deep teal night sky with satellites, globes and 3D renders of the hardware, and the same layouts are carried into a light variant so the deck holds up both projected in a room and printed as a leave-behind. Product and pricing tables, use-case breakdowns, the BumbleBee valve actuator and a global-presence map all sit on one grid.',
+    results: ['29-slide investment deck','Dark and light slide variants','Product & pricing tables','Data and map visualisations'],
+    cover: 'images/Kolir_Cases/fiberfila/fiberfila-01.jpg',
+    gallery: [
+    { type: 'group', images: [ { src: 'images/Kolir_Cases/fiberfila/fiberfila-01.jpg' } ] },
+    { type: 'group', images: [ { src: 'images/Kolir_Cases/fiberfila/fiberfila-02.jpg' } ] },
+    { type: 'group', images: [ { src: 'images/Kolir_Cases/fiberfila/fiberfila-03.jpg' } ] },
+    { type: 'group', images: [ { src: 'images/Kolir_Cases/fiberfila/fiberfila-04.jpg' } ] },
+    { type: 'group', images: [ { src: 'images/Kolir_Cases/fiberfila/fiberfila-05.jpg' } ] },
+    ],
+    links: [],
+  },
+  {
+    id: 'wirex-academy', title: 'Wirex Academy', client: 'Wirex · Crypto education', year: 2025,
+    categories: ['Editorial'], color: 'ink', text: 'cream',
+    teaser: 'An educational slide system explaining crypto — from Bitcoin history to proof of work versus proof of stake.',
+    scope: ['Presentation design','Data visualisation','Iconography','Layout system'],
+    description: 'A deck for Wirex Academy, the educational side of the crypto banking brand. Each topic gets its own colour field bleeding out from behind the slide — green for fundamentals, amber for Bitcoin price history, red for the lessons of a crash — while the slides themselves stay near-black and disciplined. The set runs the market timeline from 2009, fundamental analysis, dollar-cost averaging, the four types of stablecoin, halving history and a plain-language comparison of proof of work and proof of stake.',
+    results: ['Educational slide system','Per-topic colour coding','Charts & comparison tables','3D icon set'],
+    cover: 'images/Kolir_Cases/wirex-academy/wirex-academy-01.jpg',
+    gallery: [
+    { type: 'group', images: [ { src: 'images/Kolir_Cases/wirex-academy/wirex-academy-01.jpg' } ] },
+    { type: 'group', images: [ { src: 'images/Kolir_Cases/wirex-academy/wirex-academy-02.jpg' } ] },
+    { type: 'group', images: [ { src: 'images/Kolir_Cases/wirex-academy/wirex-academy-03.jpg' } ] },
+    { type: 'group', images: [ { src: 'images/Kolir_Cases/wirex-academy/wirex-academy-04.jpg' } ] },
+    { type: 'group', images: [ { src: 'images/Kolir_Cases/wirex-academy/wirex-academy-05.jpg' } ] },
+    ],
+    links: [],
+  },
+  {
+    id: 'polosatik', title: 'Polosatik', client: 'Polosatik · Video production & native marketing', year: 2025,
+    categories: ['Editorial'], color: 'ink', text: 'cream',
+    teaser: 'A step-by-step deck for a video agency on running a monetised YouTube Shorts channel.',
+    scope: ['Presentation design','3D & iconography','Layout system','Brand application'],
+    description: 'Polosatik is a creative agency specialising in video production and native marketing. The deck walks through a seven-step playbook for building a monetised YouTube Shorts channel — sourcing clips from Chinese video apps, downloading and uniquifying them, translating and replacing subtitles, generating AI voiceovers, uploading and finally monetising — and closes on a tools-and-tips sheet. Floating 3D YouTube glyphs, banknotes and the striped chrome moustache from the identity carry the energy between the otherwise plain, readable step cards.',
+    results: ['Seven-step playbook deck','3D key visuals','Step & tool reference cards','Identity applied across slides'],
+    cover: 'images/Kolir_Cases/polosatik/polosatik-cover.jpg',
+    gallery: [
+    { type: 'group', images: [ { src: 'images/Kolir_Cases/polosatik/polosatik-01.jpg' } ] },
+    { type: 'group', images: [ { src: 'images/Kolir_Cases/polosatik/polosatik-02.jpg' } ] },
+    { type: 'group', images: [ { src: 'images/Kolir_Cases/polosatik/polosatik-03.jpg' } ] },
+    { type: 'group', images: [ { src: 'images/Kolir_Cases/polosatik/polosatik-04.jpg' } ] },
+    ],
+    links: [],
+  },
+
   /* ===================== Showcase batch (concept works) =====================
    * Curated from Dribbble exports: agency/contact/"thanks for watching" slides
    * and near-duplicates were removed; only design content is shown. Covers use
