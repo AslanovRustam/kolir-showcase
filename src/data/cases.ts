@@ -1314,7 +1314,7 @@ export const CASES: CaseItem[] = [
     links: [],
   },
   {
-    id: 'wirex-academy', title: 'Wirex Academy', client: 'Wirex · Crypto education', year: 2025,
+    id: 'wirex-academy', title: 'Wirex Academy', client: 'Wirex · Crypto education', year: 2026,
     categories: ['Editorial'], color: 'ink', text: 'cream',
     teaser: 'An educational slide system explaining crypto — from Bitcoin history to proof of work versus proof of stake.',
     scope: ['Presentation design','Data visualisation','Iconography','Layout system'],
