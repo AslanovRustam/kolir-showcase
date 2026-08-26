@@ -171,6 +171,7 @@ export const UK_OVERRIDES: Record<string, UkOverride> = {
         { src: 'images/Nakotne/ua/13.jpg' },
         { src: 'images/Nakotne/ua/14.jpg' },
       ] },
+      1: { caption: 'Друкована продукція та матеріали для батьків — вітальний лист і форма зарахування, аркуш стікерів, вітальна папка, картка режиму дня, іменні картки дітей, бейджі викладачів і блокноти для батьків та дітей.' },
     },
   },
   'hc': {
@@ -501,7 +502,12 @@ export const UK_OVERRIDES: Record<string, UkOverride> = {
     results: ['Концепція + 3D-ключовий візуал','Повна система бренду і типографіки','Промо-лендинг','Власна анімована 404'],
     // Галерея — єдине безшовне полотно (group) з {lang}-локалізацією зображень,
     // тож попіндексні UK-підписи більше не потрібні.
-    gallery: {},
+    gallery: {
+      1: {
+        heading: 'Друкована продукція та матеріали події',
+        body: 'Айдентика — у самому просторі події: брендований блокнот, складана мапа форуму з головною сценою, воркшопами, експозоною і реєстрацією, набір стікерів, бейджі спікерів та учасників і браслети PARTICIPANT, AFTERPARTY та VIP — усе на тому ж електричному синьому з кислотно-зеленими акцентами і 3D-водяними елементами з ключового візуалу.',
+      },
+    },
   },
 };
 
@@ -564,6 +570,12 @@ export const CASES: CaseItem[] = [
         { src: 'images/Nakotne/en/13 - Unique Illustration.jpg' },
         { src: 'images/Nakotne/en/14 - UI Main page - Mobile.jpg' },
       ]},
+      { type: 'slider', caption: 'Print & parent-facing collateral — welcome letter and enrolment form, sticker sheet, welcome folder, daily-routine card, children’s name tags, teacher badges and notebooks for parents and children.', images: [
+        { src: 'images/Nakotne/1.jpg' },
+        { src: 'images/Nakotne/2.jpg' },
+        { src: 'images/Nakotne/3.jpg' },
+        { src: 'images/Nakotne/4.jpg' },
+      ] },
     ],
     links: [
       { label: 'View on Behance', url: '#', kind: 'social' },
@@ -1201,6 +1213,11 @@ export const CASES: CaseItem[] = [
         { src: 'images/CITF/{lang}/13. Переход.jpg' },
         { src: 'images/CITF/{lang}/14. Thank you for watching.jpg' },
       ] },
+      { type: 'text', heading: 'Print & event collateral', body: 'The identity taken into the venue itself: a branded notebook, a folded forum map covering the main stage, workshops, expo area and registration, a sticker pack, speaker and participant badges, and PARTICIPANT, AFTERPARTY and VIP wristbands — all on the same electric blue with acid-green accents and the 3D water elements from the key visual.' },
+      { type: 'slider', images: [
+        { src: 'images/CITF/print-01.jpg' },
+        { src: 'images/CITF/print-02.jpg' },
+      ] },
     ],
     links: [
       { label: 'View on Behance', url: '#', kind: 'social' },
@@ -1266,6 +1283,9 @@ export const CASES: CaseItem[] = [
     { type: 'group', images: [ { src: 'images/Kolir_Cases/hikebike/hikebike-05.jpg' } ] },
     { type: 'group', images: [ { src: 'images/Kolir_Cases/hikebike/hikebike-06.jpg' } ] },
     { type: 'group', images: [ { src: 'images/Kolir_Cases/hikebike/hikebike-07.jpg' } ] },
+    { type: 'text', heading: 'Print & outdoor', body: 'The dark-green, mint-accented system steps off screen. A store poster puts the lineup and the daily rate side by side, and a four-panel folded leaflet runs free city tours, the new Grunge S5C, app unlocking and hourly pricing across its spreads — the same promises the site makes, printed.' },
+    { type: 'group', images: [ { src: 'images/Kolir_Cases/hikebike/08.jpg' } ] },
+    { type: 'group', images: [ { src: 'images/Kolir_Cases/hikebike/09.jpg' } ] },
     ],
     links: [],
   },
@@ -1277,9 +1297,16 @@ export const CASES: CaseItem[] = [
     description: 'The Bakery is an artisan bread and pastry e-commerce concept. We designed a cream-and-coral storefront with a daily-special hero, product highlights for baguettes and muffins, and a clean grid that keeps the focus on the food photography.',
     results: ['E-commerce website','Brand identity','Product cards'],
     cover: 'images/Kolir_Cases/the-bakery/the-bakery-01.jpg',
-    gallery: [ { type: 'slider', images: [
-      { src: 'images/Kolir_Cases/the-bakery/the-bakery-01.jpg' }, { src: 'images/Kolir_Cases/the-bakery/the-bakery-02.jpg' }, { src: 'images/Kolir_Cases/the-bakery/the-bakery-03.jpg' },
-    ] } ],
+    gallery: [
+      { type: 'slider', images: [
+        { src: 'images/Kolir_Cases/the-bakery/the-bakery-01.jpg' }, { src: 'images/Kolir_Cases/the-bakery/the-bakery-02.jpg' }, { src: 'images/Kolir_Cases/the-bakery/the-bakery-03.jpg' },
+      ] },
+      { type: 'text', heading: 'Packaging & print', body: 'The cream-and-coral system carried into kraft packaging: windowed boxes for muffins, bags for mini croissants and swirls, printed sleeves for the baton and the baguette, and a takeaway bag reading fresh bread just from the oven. The coral dot does all the branding work — the product stays visible through every window.' },
+      { type: 'slider', images: [
+        { src: 'images/Kolir_Cases/the-bakery/the-bakery-04.jpg' },
+        { src: 'images/Kolir_Cases/the-bakery/the-bakery-05.jpg' },
+      ] },
+    ],
     links: [],
   },
   {
@@ -1323,6 +1350,7 @@ export const CASES: CaseItem[] = [
     cover: 'images/Kolir_Cases/velych/velych-01.jpg',
     gallery: [ { type: 'slider', images: [
       { src: 'images/Kolir_Cases/velych/velych-01.jpg' },
+      { src: 'images/Kolir_Cases/velych/velych-02.jpg' },
     ] } ],
     links: [],
   },
@@ -1361,7 +1389,14 @@ export const CASES: CaseItem[] = [
     description: 'A landing page for a restaurant built around traditional Ukrainian recipes. Rich food photography of borsch, vareniki and more sits against a dark layout with playful hand-drawn accents, a featured-menu carousel, reviews and clear book-a-table and order actions.',
     results: ['Restaurant landing page','Menu & reservation flow','Food-led art direction'],
     cover: 'images/Kolir_Cases/ukrainian-cuisine/ukrainian-cuisine-01.png',
-    gallery: [ { type: 'slider', images: [ { src: 'images/Kolir_Cases/ukrainian-cuisine/ukrainian-cuisine-01.png' } ] } ],
+    gallery: [
+      { type: 'slider', images: [ { src: 'images/Kolir_Cases/ukrainian-cuisine/ukrainian-cuisine-01.png' } ] },
+      { type: 'text', heading: 'Print & outdoor', body: 'The dark stage, hand-drawn accents and food-first photography move into print: a street citylight built around a bowl of borsch with salo, and a menu flyer carrying the signature dishes with prices, a drinks-and-desserts card and a catering panel on the back.' },
+      { type: 'slider', images: [
+        { src: 'images/Kolir_Cases/ukrainian-cuisine/ukrainian-cuisine-02.jpg' },
+        { src: 'images/Kolir_Cases/ukrainian-cuisine/ukrainian-cuisine-03.jpg' },
+      ] },
+    ],
     links: [],
   },
   {
@@ -1380,6 +1415,9 @@ export const CASES: CaseItem[] = [
     { type: 'group', images: [ { src: 'images/Kolir_Cases/donuts-club/donuts-club-04.jpg' } ] },
     { type: 'group', images: [ { src: 'images/Kolir_Cases/donuts-club/donuts-club-05.jpg' } ] },
     { type: 'group', images: [ { src: 'images/Kolir_Cases/donuts-club/donuts-club-06.jpg' } ] },
+    { type: 'text', heading: 'Packaging & print', body: 'The orange-and-purple identity moves onto what people actually carry out of the shop: a handled donut box with a matching cup and napkins, and a takeaway paper bag stamped SHARE JOY, SPREAD SMILES — the splashing-milk visuals and the wordmark holding across every surface.' },
+    { type: 'group', images: [ { src: 'images/Kolir_Cases/donuts-club/donuts-club-07.jpg' } ] },
+    { type: 'group', images: [ { src: 'images/Kolir_Cases/donuts-club/donuts-club-08.jpg' } ] },
     ],
     links: [],
   },
@@ -1464,6 +1502,8 @@ export const CASES: CaseItem[] = [
       { src: 'images/Kolir_Cases/medic-vet/medic-vet-04.jpg' },
       { src: 'images/Kolir_Cases/medic-vet/medic-vet-05.jpg' },
       { src: 'images/Kolir_Cases/medic-vet/medic-vet-06.jpg' },
+      { src: 'images/Kolir_Cases/medic-vet/medic-vet-07.jpg' },
+      { src: 'images/Kolir_Cases/medic-vet/medic-vet-08.jpg' },
     ] } ],
     links: [],
   },
@@ -1629,6 +1669,7 @@ export const CASES: CaseItem[] = [
       { src: 'images/Kolir_Cases/bait-boat/bait-boat-04.jpg' },
       { src: 'images/Kolir_Cases/bait-boat/bait-boat-05.jpg' },
       { src: 'images/Kolir_Cases/bait-boat/bait-boat-06.jpg' },
+      { src: 'images/Kolir_Cases/bait-boat/bait-boat-07.jpg' },
     ] } ],
     links: [],
   },
@@ -1684,7 +1725,10 @@ export const CASES: CaseItem[] = [
       { src: 'images/Kolir_Cases/casual-outfits/casual-outfits-04.jpg' },
       { src: 'images/Kolir_Cases/casual-outfits/casual-outfits-05.jpg' },
       { src: 'images/Kolir_Cases/casual-outfits/casual-outfits-06.jpg' },
-    ] } ],
+    ] },
+    { type: 'text', heading: 'Packaging & brand collateral', body: 'The same restraint applied to what arrives with an order: dusty-blue and blush mailer boxes, a rope-handled bag, swing tags, seals and stickers, a sealed envelope and printed wrap — the thin circular line mark from the storefront repeated at every size.' },
+    { type: 'group', images: [ { src: 'images/Kolir_Cases/casual-outfits/casual-outfits-07.jpg' } ] },
+    ],
     links: [],
   },
   {
@@ -1702,6 +1746,8 @@ export const CASES: CaseItem[] = [
     { type: 'group', images: [ { src: 'images/Kolir_Cases/chili-restaurant/chili-restaurant-03.jpg' } ] },
     { type: 'group', images: [ { src: 'images/Kolir_Cases/chili-restaurant/chili-restaurant-04.jpg' } ] },
     { type: 'group', images: [ { src: 'images/Kolir_Cases/chili-restaurant/chili-restaurant-05.jpg' } ] },
+    { type: 'text', heading: 'Packaging & print', body: 'The heat carries into the packaging. A bacon-burger clamshell, an ice-cold soda cup, a large fries carton and a chicken-salad bowl each run the Chili mark with the SHARE THE HEAT line, shot against the same deep-red flame stage the site is built on.' },
+    { type: 'group', images: [ { src: 'images/Kolir_Cases/chili-restaurant/chili-restaurant-06.jpg' } ] },
     ],
     links: [],
   },
@@ -1773,6 +1819,8 @@ export const CASES: CaseItem[] = [
     { type: 'group', images: [ { src: 'images/Kolir_Cases/japanese-delivery/japanese-delivery-04.jpg' } ] },
     { type: 'group', images: [ { src: 'images/Kolir_Cases/japanese-delivery/japanese-delivery-05.jpg' } ] },
     { type: 'group', images: [ { src: 'images/Kolir_Cases/japanese-delivery/japanese-delivery-06.jpg' } ] },
+    { type: 'text', heading: 'Packaging & brand collateral', body: 'The delivery brand made physical: a fish-and-chopsticks mark on a rope-handled carrier bag, seigaiha-patterned boxes in two sizes and a navy poke bowl. Warm orange against off-white, so the food is still the loudest thing in the frame.' },
+    { type: 'group', images: [ { src: 'images/Kolir_Cases/japanese-delivery/japanese-delivery-07.jpg' } ] },
     ],
     links: [],
   },
@@ -1808,6 +1856,7 @@ export const CASES: CaseItem[] = [
       { src: 'images/Kolir_Cases/drip-creamery/drip-creamery-03.jpg' },
       { src: 'images/Kolir_Cases/drip-creamery/drip-creamery-04.jpg' },
       { src: 'images/Kolir_Cases/drip-creamery/drip-creamery-05.jpg' },
+      { src: 'images/Kolir_Cases/drip-creamery/drip-creamery-06.jpg' },
     ] } ],
     links: [],
   },
@@ -1970,6 +2019,8 @@ export const CASES: CaseItem[] = [
     { type: 'group', images: [ { src: 'images/Kolir_Cases/justmine/justmine-04.jpg' } ] },
     { type: 'group', images: [ { src: 'images/Kolir_Cases/justmine/justmine-05.jpg' } ] },
     { type: 'group', images: [ { src: 'images/Kolir_Cases/justmine/justmine-06.jpg' } ] },
+    { type: 'text', heading: 'Packaging & print', body: 'The quiet burgundy-and-blush system extended into the unboxing: rigid gift boxes with tissue and a seal, a ribbon-handled bag, a thank-you card and a swing tag. The floral line mark repeats at every size and nothing else is added.' },
+    { type: 'group', images: [ { src: 'images/Kolir_Cases/justmine/justmine-07.jpg' } ] },
     ],
     links: [],
   },
@@ -2008,6 +2059,8 @@ export const CASES: CaseItem[] = [
     { type: 'group', images: [ { src: 'images/Kolir_Cases/mvsonz/mvsonz-04.jpg' } ] },
     { type: 'group', images: [ { src: 'images/Kolir_Cases/mvsonz/mvsonz-05.jpg' } ] },
     { type: 'group', images: [ { src: 'images/Kolir_Cases/mvsonz/mvsonz-06.jpg' } ] },
+    { type: 'text', heading: 'Packaging & brand collateral', body: 'The red-and-black grid taken into physical goods — shipping and shoe boxes, swing tags, a rope-handled bag, enamel pins, stickers and printed tissue. Barcodes and the occult line marks carry over from the storefront and do the connecting work.' },
+    { type: 'group', images: [ { src: 'images/Kolir_Cases/mvsonz/mvsonz-07.jpg' } ] },
     ],
     links: [],
   },
@@ -2292,6 +2345,7 @@ export const CASES: CaseItem[] = [
       { src: 'images/Kolir_Cases/vr-store/vr-store-04.jpg' },
       { src: 'images/Kolir_Cases/vr-store/vr-store-05.jpg' },
       { src: 'images/Kolir_Cases/vr-store/vr-store-06.jpg' },
+      { src: 'images/Kolir_Cases/vr-store/vr-store-07.jpg' },
     ] } ],
     links: [],
   },
