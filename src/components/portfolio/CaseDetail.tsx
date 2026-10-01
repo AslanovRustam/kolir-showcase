@@ -27,7 +27,7 @@ function GalleryFigure({ item }: { item: LocalBlock | VideoBlock }) {
           <img
             src={asset(item.src)}
             alt={item.caption || ''}
-            className="block max-w-full h-auto mx-auto"
+            className="block w-full h-auto"
             loading="lazy"
           />
         </div>
@@ -346,7 +346,7 @@ export default function CaseDetail({
                                 <img
                                   src={lAsset(img.src)}
                                   alt=""
-                                  className="block max-w-full h-auto mx-auto"
+                                  className="block w-full h-auto"
                                   style={{ marginTop: 0, marginBottom: 0 }}
                                   loading="lazy"
                                 />
@@ -364,7 +364,7 @@ export default function CaseDetail({
                                 key={j}
                                 src={lAsset(img.src)}
                                 alt=""
-                                className="block max-w-full h-auto mx-auto"
+                                className="block w-full h-auto"
                                 style={{ marginTop: 0, marginBottom: 0 }}
                                 loading="lazy"
                               />
